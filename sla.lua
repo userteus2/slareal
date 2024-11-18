@@ -11353,7 +11353,7 @@ if _G.Switch_Hub_Series_R then
                                                 if game.Workspace.Enemies:FindFirstChild('Dough King') or game.ReplicatedStorage:FindFirstChild('Dough King') then
 							if #game.Players:GetChildren() <= 11 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 								table.insert(_G.Keep_JobX,tostring(game.JobId))
-								SendBoss('https://discord.com/api/webhooks/1304583082552328284/kwG6a69w-NftaSQQL-j1youlp_xlmLFlUFVg9KynwSXHCSo681DFfWh_9Qqr6Wm4EeTY','rip_indra True Form')
+								SendBoss('https://discord.com/api/webhooks/1304583082552328284/kwG6a69w-NftaSQQL-j1youlp_xlmLFlUFVg9KynwSXHCSo681DFfWh_9Qqr6Wm4EeTY','Dough King')
 							end
 						end
 						if game.Workspace.Enemies:FindFirstChild('rip_indra True Form') or game.ReplicatedStorage:FindFirstChild('rip_indra True Form') then
