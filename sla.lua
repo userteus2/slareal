@@ -11223,7 +11223,7 @@ if _G.Switch_Hub_Series_R then
 		local data = {
 			["embeds"] = {
 				{
-					["color"] = tonumber(0xffffff);
+					["color"] = tonumber(0x4B0082);
 					["fields"] = {
 						{
 							["name"] = "Server Id";
