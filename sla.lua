@@ -62,22 +62,22 @@ getgenv().Mastery = { -- Farm Mastery / ฟามมาสเตอรี่
 
     ['Sword'] = _G.Mastery['Sword'],
     ['Setting Sword'] = { 
-        [1] = "Tushita",
-        [2] = "Hallow Scythe",
-        [3] = "Spikey Trident",
-        [4] = "Dark Dagger",
-        [5] = "Buddy Sword",
-        [6] = "Yama",
-        [7] = "Shisui",
-        [8] = "Saddi",
+        [1] = "",
+        [2] = "",
+        [3] = "",
+        [4] = "",
+        [5] = "",
+        [6] = "",
+        [7] = "",
+        [8] = "",
         [9] = "Shark Anchor",
-        [10] = "True Triple Katana",
-        [11] = "Cursed Dual Katana",
-        [12] = "Midnight Blade",
-        [13] = "Rengoku",
-        [14] = "Saber",
-        [15] = "Canvander",
-		[16] = 'Wando'
+        [10] = "",
+        [11] = "",
+        [12] = "",
+        [13] = "",
+        [14] = "",
+        [15] = "",
+		[16] = ''
     },
 
     ['Gun'] = false,
@@ -409,7 +409,7 @@ if _G.Switch_Hub_Series_R then
 		local Switch_Hub = Instance.new("ScreenGui")
 		Switch_Hub.Name = "Teus Hub"
 		Switch_Hub.Parent = game:GetService("CoreGui")
-		Switch_Hub.Enabled = false
+		Switch_Hub.Enabled = true
 		
 		
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.BottomHUDList.SafeZone.Visible = false
