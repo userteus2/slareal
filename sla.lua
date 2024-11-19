@@ -62,22 +62,22 @@ getgenv().Mastery = { -- Farm Mastery / ฟามมาสเตอรี่
 
     ['Sword'] = _G.Mastery['Sword'],
     ['Setting Sword'] = { 
-        [1] = "",
-        [2] = "",
-        [3] = "",
-        [4] = "",
-        [5] = "",
-        [6] = "",
-        [7] = "",
-        [8] = "",
+        [1] = "Tushita",
+        [2] = "Hallow Scythe",
+        [3] = "Spikey Trident",
+        [4] = "Dark Dagger",
+        [5] = "Buddy Sword",
+        [6] = "Yama",
+        [7] = "Shisui",
+        [8] = "Saddi",
         [9] = "Shark Anchor",
-        [10] = "",
-        [11] = "",
-        [12] = "",
-        [13] = "",
-        [14] = "",
-        [15] = "",
-		[16] = ''
+        [10] = "True Triple Katana",
+        [11] = "Cursed Dual Katana",
+        [12] = "Midnight Blade",
+        [13] = "Rengoku",
+        [14] = "Saber",
+        [15] = "Canvander",
+		[16] = 'Wando'
     },
 
     ['Gun'] = false,
@@ -409,7 +409,7 @@ if _G.Switch_Hub_Series_R then
 		local Switch_Hub = Instance.new("ScreenGui")
 		Switch_Hub.Name = "Teus Hub"
 		Switch_Hub.Parent = game:GetService("CoreGui")
-		Switch_Hub.Enabled = true
+		Switch_Hub.Enabled = false
 		
 		
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.BottomHUDList.SafeZone.Visible = false
@@ -7448,7 +7448,7 @@ if _G.Switch_Hub_Series_R then
 							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 							kmldgf = true
 						end
-						local Farming_Tril = true
+						local Farming_Tril = false
 						for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
 							if v.Name == 'Terrorshark' or v.Name == 'Piranha' or v.Name == 'Shark' then
 								if v:FindFirstChild('Humanoid') and v.Humanoid.Health > 0 and (v.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 700 then
