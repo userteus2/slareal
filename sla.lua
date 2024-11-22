@@ -1247,14 +1247,7 @@ if _G.Switch_Hub_Series_R then
 			end
 		end)
 	end
-	Tool_Special_S:AddButton({
-		Name = ' Teleport Bypass ',
-		Callback = function()
-			if Select_Island_X == nil then
-			else
-				TPX(game:GetService("Workspace").Map[Select_Island_X].WorldPivot)
-			end
-		end
+
 		})
 		Tool_Special_S:AddToggle({
 			Name = 'White Screen',
