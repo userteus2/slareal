@@ -11391,7 +11391,7 @@ if _G.Switch_Hub_Series_R then
 							end
 						end
 						if #game.Players:GetChildren() <= 3 then
-							SendFullMoon('https://discord.com/api/webhooks/1309392524078481408/q1BdKrYsW187LMzgH6Ei3I9WbMEEs3mW7HWpymvJgELauFVrz8jpZbJublWXVbcZxCMP')
+							SendFullMoon('https://discord.com/api/webhooks/1309418812222738432/hdGJnM4BnV5hDcD8-uClPcqSFWf6JGxtAZ8J7lZqEystGFpdiNVXNxmQGkiTiIIBywp3') ----
 						end
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" and #game.Players:GetChildren() <= 9 then
 							local result = {}
