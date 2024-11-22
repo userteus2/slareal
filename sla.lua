@@ -7316,21 +7316,7 @@ if _G.Switch_Hub_Series_R then
                                     end
 								end
 							end
-						elseif not game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") then
-							wait(3)
-							if not game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") and not game.Workspace.Enemies:FindFirstChild('rip_indra True Form') and not game.ReplicatedStorage:FindFirstChild('rip_indra True Form') then
-								game.StarterGui:SetCore("SendNotification", {
-									Title = "Check Boss Spawn", 
-									Text = '99/10',
-									Icon = "rbxassetid://17002601075",
-									Duration = 15
-								})
-								List.Quest = false 
-								Quest_Istand = nil
-							end
-						end
-					elseif List.Pull_Lerver then
-						if not ExSeb then
+						
                             if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaceV4Progress","Check") == 1 then
                                 local args = {
                                     [1] = "RaceV4Progress",
