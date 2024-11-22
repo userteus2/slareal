@@ -11410,7 +11410,7 @@ if _G.Switch_Hub_Series_R then
 							return
 						elseif FullMoon_S and not table.find(_G.Keep_Job,tostring(game.JobId)) and game:GetService("Lighting").LightingLayers.Night.Intensity.Value == 1 then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
-							SendFullMoon('https://discord.com/api/webhooks/1304584605520891986/lOd1zYNNM_VDJhC4ehctg7zX5lHl9S3ZhCyC-ggP1zTqiR0D--7czmIXgmbgNaHANF6X')
+							SendFullMoon('https://discord.com/api/webhooks/1309392524078481408/q1BdKrYsW187LMzgH6Ei3I9WbMEEs3mW7HWpymvJgELauFVrz8jpZbJublWXVbcZxCMP')
 							return
 						elseif MysticIsland_S and not table.find(_G.Keep_Job,tostring(game.JobId)) then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
