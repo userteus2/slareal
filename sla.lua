@@ -118,7 +118,7 @@ getgenv().Mastery = { -- Farm Mastery / ฟามมาสเตอรี่
 
 _G.On_Next_Generation = true
 if _G.On_Next_Generation then
-    _G.Switch_Hub_Series_R = true
+    _G.Teus_Hub_Series_R = true
     _G.Quest = {
         ['RGB'] = getgenv().Quest['RGB Haki']
     }
@@ -154,7 +154,7 @@ if type(Bijan) == 'table' then
 else
 	game:Shutdown()
 end
-if _G.Switch_Hub_Series_R then
+if _G.Teus_Hub_Series_R then
 	if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 	
 	local function click(a)
@@ -6749,7 +6749,7 @@ if _G.Switch_Hub_Series_R then
 	spawn(function()
 		while wait(1) do
 			if Three_World then
-				if game.Players.LocalPlayer.Data.Level.Value >= 2000 then
+				if game.Players.LocalPlayer.Data.Level.Value >= 1550 then
 					if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Check") == 0 and tonumber(CheckItem('Bones')) > 0 then
 						Farm_Bone = false
 						Check_Bone = false
@@ -6847,7 +6847,7 @@ if _G.Switch_Hub_Series_R then
 					ris_text = ris_text..' SGT '
 				end 
 				if Shark_Anchor_H then
-					ris_text = ris_text..' SHARK ANCHOR '
+					ris_text = ris_text..' ANCHOR '
 				end
 				if ris_text ~= '' then
 					if Mirror_Fractal_H then
