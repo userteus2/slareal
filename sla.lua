@@ -6598,7 +6598,7 @@ if _G.Switch_Hub_Series_R then
 	spawn(function()
 		while wait(1) do
 			if Three_World then
-				if game.Players.LocalPlayer.Data.Level.Value >= 2000 then
+				if game.Players.LocalPlayer.Data.Level.Value >= 1500 then
 					if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Check") == 0 and tonumber(CheckItem('Bones')) > 0 then
 						Farm_Bone = false
 						Check_Bone = false
