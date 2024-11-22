@@ -11391,7 +11391,7 @@ if _G.Switch_Hub_Series_R then
 							end
 						end
 						if #game.Players:GetChildren() <= 3 then
-							SendFullMoon('https://discord.com/api/webhooks/1309392524078481408/q1BdKrYsW187LMzgH6Ei3I9WbMEEs3mW7HWpymvJgELauFVrz8jpZbJublWXVbcZxCMP')
+							SendFullMoon('')
 						end
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" and #game.Players:GetChildren() <= 9 then
 							local result = {}
@@ -11401,7 +11401,7 @@ if _G.Switch_Hub_Series_R then
 								table.insert(result, each)
 							end
 							if tonumber(result[1]) >= 0 and tonumber(result[1]) < 12 then
-								SendFullMoon('https://discord.com/api/webhooks/1309392524078481408/q1BdKrYsW187LMzgH6Ei3I9WbMEEs3mW7HWpymvJgELauFVrz8jpZbJublWXVbcZxCMP')
+								SendFullMoon('')
 							end
 						end
 						if FullMoon_S and MysticIsland_S and not table.find(_G.Keep_Job,tostring(game.JobId)) and game:GetService("Lighting").LightingLayers.Night.Intensity.Value == 1 then
