@@ -11123,7 +11123,7 @@ if _G.Switch_Hub_Series_R then
 					};
 					["description"] = "**Join Script**\n```lua\n"..tostring('game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport","'..game.JobId..'")').."\n```";
 					["author"] = {
-						["name"] = "Teus Hub (Notification)";
+						["name"] = "Teus Hub Finders";
 						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["thumbnail"] = {
@@ -11189,7 +11189,7 @@ if _G.Switch_Hub_Series_R then
 						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["thumbnail"] = {
-						["url"] = "https://pbs.twimg.com/media/FDsZOHhVkAUsFeJ.jpg";
+						["url"] = "https://media.discordapp.net/attachments/1256407871609114627/1308246114318680215/image.png?ex=674284a3&is=67413323&hm=0189b45aa9ba1e9e134d97f3bcefa743f39271e2802b7fff4333eb0c4886ac3c&=&format=webp&quality=lossless&width=304&height=258";
 					};
 					["footer"] = {
 						["text"] = "By Teus Hub";
