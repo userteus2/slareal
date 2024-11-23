@@ -11127,7 +11127,7 @@ if _G.Switch_Hub_Series_R then
 						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["thumbnail"] = {
-						["url"] = "https://media.discordapp.net/attachments/1256407871609114627/1308246114318680215/image.png?ex=674284a3&is=67413323&hm=0189b45aa9ba1e9e134d97f3bcefa743f39271e2802b7fff4333eb0c4886ac3c&=&format=webp&quality=lossless&width=304&height=258";
+						["url"] = "https://cdn.discordapp.com/attachments/1258136405310181396/1308529443664560232/Captura_de_tela_2024-11-18_224241.png?ex=67423b02&is=6740e982&hm=a511439eb8f3be23ad4f921391db12a3cda22a6f547c2fd29596a2d3c02949fa&";
 					};
 					["footer"] = {
 						["text"] = "By Teus Hub";
@@ -11189,7 +11189,7 @@ if _G.Switch_Hub_Series_R then
 						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["thumbnail"] = {
-						["url"] = "https://media.discordapp.net/attachments/1256407871609114627/1308246114318680215/image.png?ex=674284a3&is=67413323&hm=0189b45aa9ba1e9e134d97f3bcefa743f39271e2802b7fff4333eb0c4886ac3c&=&format=webp&quality=lossless&width=304&height=258";
+						["url"] = "https://cdn.discordapp.com/attachments/1258136405310181396/1308529443664560232/Captura_de_tela_2024-11-18_224241.png?ex=67423b02&is=6740e982&hm=a511439eb8f3be23ad4f921391db12a3cda22a6f547c2fd29596a2d3c02949fa&";
 					};
 					["footer"] = {
 						["text"] = "By Teus Hub";
