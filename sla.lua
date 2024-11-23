@@ -7169,8 +7169,8 @@ if _G.Switch_Hub_Series_R then
 							wait(3)
 							if not game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") and not game.Workspace.Enemies:FindFirstChild('rip_indra True Form') and not game.ReplicatedStorage:FindFirstChild('rip_indra True Form') then
 								game.StarterGui:SetCore("SendNotification", {
-									Title = "Check Boss Spawn", 
-									Text = 'Teus Hub',
+									Title = "Teus Hub", 
+									Text = 'Check Boss Spawn',
 									Icon = "rbxassetid://114239849954263",
 									Duration = 3
 								})
