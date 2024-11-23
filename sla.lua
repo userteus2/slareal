@@ -7234,31 +7234,31 @@ if _G.Switch_Hub_Series_R then
                                                 table.insert(result, each)
                                             end
                                             local load_tag = false
-                                            if tonumber(result[1]) >= 18 and tonumber(result[1]) < 20 then
+                                            if tonumber(result[1]) >= 0 and tonumber(result[1]) < 24 then
                                                 game.Lighting.Sky.MoonAngularSize = 60
                                                 workspace.CurrentCamera.CFrame = CFrame.new(256.224945, 10.0014305, 7402.05225, -0.86680156, -0.285385847, -0.408913255, 0, 0.820035219, -0.57231313, 0.498653352, -0.496081918, -0.710807681)
 												wait(.3)
 												workspace.CurrentCamera.CFrame = CFrame.new(256.224945, 10.0014305, 7402.05225, -0.86680156, -0.285385847, -0.408913255, 0, 0.820035219, -0.57231313, 0.498653352, -0.496081918, -0.710807681)
                                                 load_tag = true
-                                            elseif tonumber(result[1]) >= 20 and tonumber(result[1]) < 23 then
+                                            elseif tonumber(result[1]) >= 0 and tonumber(result[1]) < 24 then
                                                 game.Lighting.Sky.MoonAngularSize = 60
                                                 workspace.CurrentCamera.CFrame = CFrame.new(276.224945, 10.0014305, 7402.05225, -0.86680156, -0.285385847, -0.408913255, 0, 0.820035219, -0.57231313, 0.498653352, -0.496081918, -0.710807681)
                                                 wait(.3)
 												workspace.CurrentCamera.CFrame = CFrame.new(276.224945, 10.0014305, 7402.05225, -0.86680156, -0.285385847, -0.408913255, 0, 0.820035219, -0.57231313, 0.498653352, -0.496081918, -0.710807681)
 												load_tag = true
-                                            elseif tonumber(result[1]) >= 23 then
+                                            elseif tonumber(result[1]) >= 0 then
                                                 game.Lighting.Sky.MoonAngularSize = 60
                                                 workspace.CurrentCamera.CFrame = CFrame.new(280.220398, 10.0163631, 7398.78711, -0.99949348, 0.0149384635, 0.028100336, 9.31322464e-10, 0.882983506, -0.469404191, -0.0318243057, -0.469166428, -0.882536292)
 												wait(.3)
 												workspace.CurrentCamera.CFrame = CFrame.new(280.220398, 10.0163631, 7398.78711, -0.99949348, 0.0149384635, 0.028100336, 9.31322464e-10, 0.882983506, -0.469404191, -0.0318243057, -0.469166428, -0.882536292)
                                                 load_tag = true
-                                            elseif tonumber(result[1]) >= 0 and tonumber(result[1]) < 2 then
+                                            elseif tonumber(result[1]) >= 0 and tonumber(result[1]) < 24 then
                                                 game.Lighting.Sky.MoonAngularSize = 60
                                                 workspace.CurrentCamera.CFrame = CFrame.new(187.110519, 311.094543, 7251.67285, -0.983385324, 0.120902099, 0.135410622, -7.4505806e-09, 0.745938301, -0.666015029, -0.181530595, -0.654949427, -0.733544707)
                                                 wait(.3)
 												workspace.CurrentCamera.CFrame = CFrame.new(187.110519, 311.094543, 7251.67285, -0.983385324, 0.120902099, 0.135410622, -7.4505806e-09, 0.745938301, -0.666015029, -0.181530595, -0.654949427, -0.733544707)
 												load_tag = true
-                                            elseif tonumber(result[1]) >= 2 and tonumber(result[1]) <= 5 then
+                                            elseif tonumber(result[1]) >= 0 and tonumber(result[1]) <= 24 then
                                                 game.Lighting.Sky.MoonAngularSize = 60
                                                 workspace.CurrentCamera.CFrame = CFrame.new(17.9850445, 541.176575, 6902.08154, -0.866957009, 0.111039586, 0.485855788, 0, 0.974864244, -0.222799659, -0.498383105, -0.193157732, -0.845165253)
 												wait(.3)
