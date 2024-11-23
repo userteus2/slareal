@@ -5483,7 +5483,7 @@ if _G.Switch_Hub_Series_R then
 						if CheckItem('Fish Tail') >= 20 then
 							Check_Fish_Tail = true
 						else
-							Quest = 'Q Fish Tail'
+							Quest = 'Farm Fish Tail'
 							List.Quest = true
 						end
 					elseif game.Players.LocalPlayer.Data.Level.Value >= 700 and game.Players.LocalPlayer.Data.Level.Value < 2550 and Old_World then
@@ -5496,21 +5496,21 @@ if _G.Switch_Hub_Series_R then
 						if CheckItem('Ectoplasm') >= 250 then
 							Check_Ectoplasm = true
 						else
-							Quest = 'Q Ectoplasm'
+							Quest = 'Farm Ectoplasm'
 							List.Quest = true
 						end
 					elseif game.Players.LocalPlayer.Data.Level.Value >= 1500 and not God_Human_Buy and _G.Melee['Godhuman'] and not Check_Magma_Ore and New_World then
 						if CheckItem('Magma Ore') >= 20 then
 							Check_Magma_Ore = true
 						else
-							Quest = 'Q Magma Ore'
+							Quest = 'Farm Magma Ore'
 							List.Quest = true
 						end
 					elseif game.Players.LocalPlayer.Data.Level.Value >= 1500 and not God_Human_Buy and _G.Melee['Godhuman'] and not Check_Mystic_Droplet and New_World then
 						if CheckItem('Mystic Droplet') >= 10 then
 							Check_Mystic_Droplet = true
 						else
-							Quest = 'Q Mystic Droplet'
+							Quest = 'Farm Mystic Droplet'
 							List.Quest = true
 						end
 					elseif game.Players.LocalPlayer.Data.Level.Value >= 2550 and Select_race_low and God_Human_H then
@@ -6696,7 +6696,7 @@ if _G.Switch_Hub_Series_R then
 					ris_text = ris_text..' SGT '
 				end 
 				if Shark_Anchor_H then
-					ris_text = ris_text..' SHARK ANCHOR '
+					ris_text = ris_text..' SHA '
 				end
 				if ris_text ~= '' then
 					if Mirror_Fractal_H then
@@ -8806,7 +8806,7 @@ if _G.Switch_Hub_Series_R then
 							if not bit then
 								List.Quest = false
 							end
-						elseif Quest == 'Q Ectoplasm' then
+						elseif Quest == 'Farm Ectoplasm' then
 							if CheckItem('Ectoplasm') >= 250 then
 								List.Quest = false
 							else
@@ -8857,7 +8857,7 @@ if _G.Switch_Hub_Series_R then
 									end
 								end
 							end
-						elseif Quest == 'Q Magma Ore' then
+						elseif Quest == 'Farm Magma Ore' then
 							if CheckItem('Magma Ore') >= 20 then
 								List.Quest = false
 							else
@@ -8908,7 +8908,7 @@ if _G.Switch_Hub_Series_R then
 									end
 								end
 							end
-						elseif Quest == 'Q Mystic Droplet' then
+						elseif Quest == 'Farm Mystic Droplet' then
 							if CheckItem('Mystic Droplet') >= 20 then
 								List.Quest = false
 							else
