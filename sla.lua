@@ -7165,7 +7165,21 @@ if _G.Switch_Hub_Series_R then
                                     end
 								end
 							end
-						
+						elseif not game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") then
+							wait(3)
+							if not game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") and not game.Workspace.Enemies:FindFirstChild('rip_indra True Form') and not game.ReplicatedStorage:FindFirstChild('rip_indra True Form') then
+								game.StarterGui:SetCore("SendNotification", {
+									Title = "Check Boss Spawn", 
+									Text = '99/10',
+									Icon = "rbxassetid://17002601075",
+									Duration = 15
+								})
+								List.Quest = false 
+								Quest_Istand = nil
+							end
+						end
+					elseif List.Pull_Lerver then
+						if not ExSeb then
                             if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaceV4Progress","Check") == 1 then
                                 local args = {
                                     [1] = "RaceV4Progress",
@@ -7234,31 +7248,31 @@ if _G.Switch_Hub_Series_R then
                                                 table.insert(result, each)
                                             end
                                             local load_tag = false
-                                            if tonumber(result[1]) >= 0 and tonumber(result[1]) < 24 then
+                                            if tonumber(result[1]) >= 18 and tonumber(result[1]) < 20 then
                                                 game.Lighting.Sky.MoonAngularSize = 60
                                                 workspace.CurrentCamera.CFrame = CFrame.new(256.224945, 10.0014305, 7402.05225, -0.86680156, -0.285385847, -0.408913255, 0, 0.820035219, -0.57231313, 0.498653352, -0.496081918, -0.710807681)
 												wait(.3)
 												workspace.CurrentCamera.CFrame = CFrame.new(256.224945, 10.0014305, 7402.05225, -0.86680156, -0.285385847, -0.408913255, 0, 0.820035219, -0.57231313, 0.498653352, -0.496081918, -0.710807681)
                                                 load_tag = true
-                                            elseif tonumber(result[1]) >= 0 and tonumber(result[1]) < 24 then
+                                            elseif tonumber(result[1]) >= 20 and tonumber(result[1]) < 23 then
                                                 game.Lighting.Sky.MoonAngularSize = 60
                                                 workspace.CurrentCamera.CFrame = CFrame.new(276.224945, 10.0014305, 7402.05225, -0.86680156, -0.285385847, -0.408913255, 0, 0.820035219, -0.57231313, 0.498653352, -0.496081918, -0.710807681)
                                                 wait(.3)
 												workspace.CurrentCamera.CFrame = CFrame.new(276.224945, 10.0014305, 7402.05225, -0.86680156, -0.285385847, -0.408913255, 0, 0.820035219, -0.57231313, 0.498653352, -0.496081918, -0.710807681)
 												load_tag = true
-                                            elseif tonumber(result[1]) >= 0 then
+                                            elseif tonumber(result[1]) >= 23 then
                                                 game.Lighting.Sky.MoonAngularSize = 60
                                                 workspace.CurrentCamera.CFrame = CFrame.new(280.220398, 10.0163631, 7398.78711, -0.99949348, 0.0149384635, 0.028100336, 9.31322464e-10, 0.882983506, -0.469404191, -0.0318243057, -0.469166428, -0.882536292)
 												wait(.3)
 												workspace.CurrentCamera.CFrame = CFrame.new(280.220398, 10.0163631, 7398.78711, -0.99949348, 0.0149384635, 0.028100336, 9.31322464e-10, 0.882983506, -0.469404191, -0.0318243057, -0.469166428, -0.882536292)
                                                 load_tag = true
-                                            elseif tonumber(result[1]) >= 0 and tonumber(result[1]) < 24 then
+                                            elseif tonumber(result[1]) >= 0 and tonumber(result[1]) < 2 then
                                                 game.Lighting.Sky.MoonAngularSize = 60
                                                 workspace.CurrentCamera.CFrame = CFrame.new(187.110519, 311.094543, 7251.67285, -0.983385324, 0.120902099, 0.135410622, -7.4505806e-09, 0.745938301, -0.666015029, -0.181530595, -0.654949427, -0.733544707)
                                                 wait(.3)
 												workspace.CurrentCamera.CFrame = CFrame.new(187.110519, 311.094543, 7251.67285, -0.983385324, 0.120902099, 0.135410622, -7.4505806e-09, 0.745938301, -0.666015029, -0.181530595, -0.654949427, -0.733544707)
 												load_tag = true
-                                            elseif tonumber(result[1]) >= 0 and tonumber(result[1]) <= 24 then
+                                            elseif tonumber(result[1]) >= 2 and tonumber(result[1]) <= 5 then
                                                 game.Lighting.Sky.MoonAngularSize = 60
                                                 workspace.CurrentCamera.CFrame = CFrame.new(17.9850445, 541.176575, 6902.08154, -0.866957009, 0.111039586, 0.485855788, 0, 0.974864244, -0.222799659, -0.498383105, -0.193157732, -0.845165253)
 												wait(.3)
@@ -11226,7 +11240,7 @@ if _G.Switch_Hub_Series_R then
 							end
 						end
 						if #game.Players:GetChildren() <= 3 then
-							SendFullMoon('https://discord.com/api/webhooks/1309418812222738432/hdGJnM4BnV5hDcD8-uClPcqSFWf6JGxtAZ8J7lZqEystGFpdiNVXNxmQGkiTiIIBywp3') ---- low player
+							SendFullMoon('https://discord.com/api/webhooks/1309418812222738432/hdGJnM4BnV5hDcD8-uClPcqSFWf6JGxtAZ8J7lZqEystGFpdiNVXNxmQGkiTiIIBywp3')
 						end
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" and #game.Players:GetChildren() <= 9 then
 							local result = {}
@@ -11236,7 +11250,7 @@ if _G.Switch_Hub_Series_R then
 								table.insert(result, each)
 							end
 							if tonumber(result[1]) >= 0 and tonumber(result[1]) < 12 then
-								SendFullMoon('https://discord.com/api/webhooks/1309392524078481408/q1BdKrYsW187LMzgH6Ei3I9WbMEEs3mW7HWpymvJgELauFVrz8jpZbJublWXVbcZxCMP') ----fullmoon
+								SendFullMoon('https://discord.com/api/webhooks/1304584605520891986/lOd1zYNNM_VDJhC4ehctg7zX5lHl9S3ZhCyC-ggP1zTqiR0D--7czmIXgmbgNaHANF6X')
 							end
 						end
 						if FullMoon_S and MysticIsland_S and not table.find(_G.Keep_Job,tostring(game.JobId)) and game:GetService("Lighting").LightingLayers.Night.Intensity.Value == 1 then
@@ -11245,7 +11259,7 @@ if _G.Switch_Hub_Series_R then
 							return
 						elseif FullMoon_S and not table.find(_G.Keep_Job,tostring(game.JobId)) and game:GetService("Lighting").LightingLayers.Night.Intensity.Value == 1 then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
-							SendFullMoon('https://discord.com/api/webhooks/1309421153399345205/QtVgTkDCkStwcJl7huBqNtIHkTTuO1tTgYbJZcOJEhKuYllh4nujh7q5n7zuxPzDABrR')
+							SendFullMoon('https://discord.com/api/webhooks/1309742546083254362/rpilLS_7En7DF-wYDNphByTlz1XCmcFQmU-H6MVBEsycgKI8gCyfhD2YVTLZdrEbJt82')
 							return
 						elseif MysticIsland_S and not table.find(_G.Keep_Job,tostring(game.JobId)) then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
