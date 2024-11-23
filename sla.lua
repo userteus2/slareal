@@ -11239,6 +11239,12 @@ if _G.Switch_Hub_Series_R then
 								SendBoss('https://discord.com/api/webhooks/1308201460701593610/WZTpuZuhzJY1ZYGHL-nMLhHBQx5xGJU1GrbfI4H_I_CNZyaoSRSloTlHagOJlVVbyvL3','Dough King')
 							end
 						end
+                                                if game.Workspace.Enemies:FindFirstChild('Soul Reaper') or game.ReplicatedStorage:FindFirstChild('Soul Reaper') then
+							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
+								table.insert(_G.Keep_JobX,tostring(game.JobId))
+								SendBoss('https://discord.com/api/webhooks/1308201460701593610/WZTpuZuhzJY1ZYGHL-nMLhHBQx5xGJU1GrbfI4H_I_CNZyaoSRSloTlHagOJlVVbyvL3','Soul Reaper')
+							end
+						end
 						if game.Workspace.Enemies:FindFirstChild('rip_indra True Form') or game.ReplicatedStorage:FindFirstChild('rip_indra True Form') then
 							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 								table.insert(_G.Keep_JobX,tostring(game.JobId))
