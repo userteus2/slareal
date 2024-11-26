@@ -1181,19 +1181,9 @@ if _G.Switch_Hub_Series_R then
 		end
 	end
 	    
-function TPX(RealTarget)
-    pcall(function()
-        local Distance = (RealTarget.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).Magnitude
-
-        -- Ajusta o teleporte diretamente
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = RealTarget
-        task.wait(3) -- Aguarda 3 segundos na posição para registrar o checkpoint
-
-        -- Caso necessário, reforça o teleporte no mesmo local
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = RealTarget
-    end)
-end
-
+	function TPX(RealTarget)
+		pcall(function()
+			local Distance = (RealTarget.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).Magnitude
 			if Distance < 100 then
 				Speed = 1500
 			elseif Distance < 200 then
@@ -1243,11 +1233,11 @@ end
                         game.Players.LocalPlayer.Character.Humanoid:ChangeState(15)
                         game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(RealTarget)
                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = RealTarget
-                        task.wait(3)
+                        task.wait()
                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = RealTarget
-                        task.wait(3)
+                        task.wait()
                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = RealTarget
-                        task.wait(3)
+                        task.wait()
                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = RealTarget
                         wait(7)
                     end
@@ -1257,14 +1247,6 @@ end
 			end
 		end)
 	end
-	Tool_Special_S:AddButton({
-		Name = ' Teleport Bypass ',
-		Callback = function()
-			if Select_Island_X == nil then
-			else
-				TPX(game:GetService("Workspace").Map[Select_Island_X].WorldPivot)
-			end
-		end
 		})
 		Tool_Special_S:AddToggle({
 			Name = 'White Screen',
