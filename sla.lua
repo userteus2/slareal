@@ -1194,7 +1194,6 @@ function TPX(RealTarget)
     end)
 end
 
-
 			if Distance < 100 then
 				Speed = 1500
 			elseif Distance < 200 then
