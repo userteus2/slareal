@@ -2224,158 +2224,7 @@ if _G.Switch_Hub_Series_R then
 				NameMon = "Shanda"
 				CFrameQ = CFrame.new(-7859.09814, 5544.19043, -381.476196)
 				CFrameMon = CFrame.new(-7904.57373, 5584.37646, -459.62973)
-	    
-        Next_Level_X = 75
-			elseif game.Players.LocalPlayer.Data.Level.Value >= 60 and game.Players.LocalPlayer.Data.Level.Value <= 75-1 or SelectMonster == "Desert Bandit" then
-				Ms = "Desert Bandit"
-				NameQuest = "DesertQuest"
-				QuestLv = 1
-				NameMon = "Desert Bandit"
-				CFrameQ = CFrame.new(894.488647, 5.14000702, 4392.43359, 0.819155693, -0, -0.573571265, 0, 1, -0, 0.573571265, 0, 0.819155693)
-				CFrameMon = CFrame.new(932.788818, 6.8503746, 4488.24609, -0.998625934, 3.08948351e-08, 0.0524050146, 2.79967303e-08, 1, -5.60361286e-08, -0.0524050146, -5.44919629e-08, -0.998625934)
-			elseif game.Players.LocalPlayer.Data.Level.Value >= 75 and game.Players.LocalPlayer.Data.Level.Value <= 90-1 or SelectMonster == "Desert Officer" then
-				Ms = "Desert Officer"
-				NameQuest = "DesertQuest"
-				QuestLv = 2
-				NameMon = "Desert Officer"
-				CFrameQ = CFrame.new(894.488647, 5.14000702, 4392.43359, 0.819155693, -0, -0.573571265, 0, 1, -0, 0.573571265, 0, 0.819155693)
-				CFrameMon = CFrame.new(1617.07886, 1.5542295, 4295.54932, -0.997540116, -2.26287735e-08, -0.070099175, -1.69377223e-08, 1, -8.17798806e-08, 0.070099175, -8.03913949e-08, -0.997540116)
-				
-				SelectMonster = "Desert Bandit"
-				Next_Level_X = 90
-			elseif game.Players.LocalPlayer.Data.Level.Value >= 90 and game.Players.LocalPlayer.Data.Level.Value <= 100-1 or SelectMonster == "Snow Bandit" then -- Snow Bandits
-				Ms = "Snow Bandit"
-				NameQuest = "SnowQuest"
-				QuestLv = 1
-				NameMon = "Snow Bandit"
-				CFrameQ = CFrame.new(1389.74451, 86.6520844, -1298.90796, -0.342042685, 0, 0.939684391, 0, 1, 0, -0.939684391, 0, -0.342042685)
-				CFrameMon = CFrame.new(1412.92346, 55.3503647, -1260.62036, -0.246266365, -0.0169920288, -0.969053388, 0.000432241941, 0.999844253, -0.0176417865, 0.969202161, -0.00476344163, -0.246220857)
-				
-				if SelectMonster == "Snow Bandit" then
-				else
-					Next_Level_X = 100
-				end
-				if game.Players.LocalPlayer.Data.Level.Value >= 110 then
-					SelectBoss_P = "Yeti" 
-				end
-				
-			elseif game.Players.LocalPlayer.Data.Level.Value == 100 or game.Players.LocalPlayer.Data.Level.Value <= 119 or SelectMonster == "Snowman" then -- Snowman
-				Next_Level_X = 120
-				Ms = "Snowman"
-				NameQuest = "SnowQuest"
-				QuestLv = 2
-				NameMon = "Snowman"
-				CFrameQ = CFrame.new(1389.74451, 86.6520844, -1298.90796, -0.342042685, 0, 0.939684391, 0, 1, 0, -0.939684391, 0, -0.342042685)
-				CFrameMon = CFrame.new(1376.86401, 97.2779999, -1396.93115, -0.986755967, 7.71178321e-08, -0.162211925, 7.71531674e-08, 1, 6.08143536e-09, 0.162211925, -6.51427134e-09, -0.986755967)
-				
-				
-				if game.Players.LocalPlayer.Data.Level.Value >= 110 then
-					SelectBoss_P = "Yeti" 
-				end
-				SelectMonster = "Snow Bandit"
-			elseif game.Players.LocalPlayer.Data.Level.Value == 120 or game.Players.LocalPlayer.Data.Level.Value <= 174 or SelectMonster == "Chief Petty Officer" then -- Chief Petty Officer
-				Ms = "Chief Petty Officer"
-				NameQuest = "MarineQuest2"
-				QuestLv = 1
-				NameMon = "Chief Petty Officer"
-				CFrameQ = CFrame.new(-5039.58643, 27.3500385, 4324.68018, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-				CFrameMon = CFrame.new(-4882.8623, 22.6520386, 4255.53516, 0.273695946, -5.40380647e-08, -0.96181643, 4.37720793e-08, 1, -4.37274998e-08, 0.96181643, -3.01326679e-08, 0.273695946)
-				
-				
-				if game.Players.LocalPlayer.Data.Level.Value >= 130 then
-					SelectBoss_P = "Vice Admiral"
-				end
-				if SelectMonster == "Chief Petty Officer" then
-				else
-					Next_Level_X = 175
-				end
-			elseif SelectMonster == "Sky Bandit" then -- Sky Bandit
-				Ms = "Sky Bandit"
-				NameQuest = "SkyQuest"
-				QuestLv = 1
-				NameMon = "Sky Bandit"
-				CFrameQ = CFrame.new(-4839.53027, 716.368591, -2619.44165, 0.866007268, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, 0.866007268)
-				CFrameMon = CFrame.new(-4959.51367, 365.39267, -2974.56812, 0.964867651, 7.74418396e-08, 0.262737453, -6.95931988e-08, 1, -3.91783708e-08, -0.262737453, 1.95171506e-08, 0.964867651)
-				
-				
-			elseif game.Players.LocalPlayer.Data.Level.Value == 175 or game.Players.LocalPlayer.Data.Level.Value <= 190-1 or SelectMonster == "Dark Master" then -- Dark Master
-				
-				Ms = "Dark Master"
-				NameQuest = "SkyQuest"
-				QuestLv = 2
-				NameMon = "Dark Master"
-				CFrameQ = CFrame.new(-4839.53027, 716.368591, -2619.44165, 0.866007268, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, 0.866007268)
-				CFrameMon = CFrame.new(-5079.98096, 376.477356, -2194.17139, 0.465965867, -3.69776352e-08, 0.884802461, 3.40249851e-09, 1, 4.00000886e-08, -0.884802461, -1.56281423e-08, 0.465965867)
-				
-				SelectMonster = "Sky Bandit"
-				if SelectMonster == "Dark Master" then
-				else
-					Next_Level_X = 190
-				end
-			elseif game.Players.LocalPlayer.Data.Level.Value == 190 or game.Players.LocalPlayer.Data.Level.Value <= 209 or SelectMonster == "Prisoner" then
-				
-				Ms = "Prisoner"
-				QuestLv = 1
-				NameQuest = "PrisonerQuest"
-				NameMon = "Prisoner"
-				CFrameQ = CFrame.new(5308.93115, 1.65517521, 475.120514, -0.0894274712, -5.00292918e-09, -0.995993316, 1.60817859e-09, 1, -5.16744869e-09, 0.995993316, -2.06384709e-09, -0.0894274712)
-				CFrameMon = CFrame.new(5433.39307, 88.678093, 514.986877, 0.879988372, 0, -0.474995494, 0, 1, 0, 0.474995494, 0, 0.879988372)
-				if game.Players.LocalPlayer.Data.Level.Value >= 220 then
-					SelectBoss_P = "Warden" 
-				end
-				if game.Players.LocalPlayer.Data.Level.Value >= 232 then
-					SelectBoss_P = "Chief Warden"
-				end
-				if game.Players.LocalPlayer.Data.Level.Value >= 242 then
-					SelectBoss_P = "Thunder God"
-				end
-				if SelectMonster == "Prisoner" then
-				else
-					Next_Level_X = 210
-				end
-				Bypass_TP_Dis = true
-			elseif game.Players.LocalPlayer.Data.Level.Value == 210 or game.Players.LocalPlayer.Data.Level.Value <= 249 or SelectMonster == "Dangerous Prisoner" then
-				if game.Players.LocalPlayer.Data.Level.Value >= 220 then
-					SelectBoss_P = "Warden" 
-				end
-				if game.Players.LocalPlayer.Data.Level.Value >= 232 then
-					SelectBoss_P = "Chief Warden"
-				end
-				if game.Players.LocalPlayer.Data.Level.Value >= 242 then
-					SelectBoss_P = "Thunder God"
-				end
-				Ms = "Dangerous Prisoner"
-				QuestLv = 2
-				NameQuest = "PrisonerQuest"
-				NameMon = "Dangerous Prisoner"
-				CFrameQ = CFrame.new(5308.93115, 1.65517521, 475.120514, -0.0894274712, -5.00292918e-09, -0.995993316, 1.60817859e-09, 1, -5.16744869e-09, 0.995993316, -2.06384709e-09, -0.0894274712)
-				CFrameMon = CFrame.new(5433.39307, 88.678093, 514.986877, 0.879988372, 0, -0.474995494, 0, 1, 0, 0.474995494, 0, 0.879988372)
-				SelectMonster = "Prisoner"
-				Next_Level_X = 250
-				Bypass_TP_Dis = true
-			elseif game.Players.LocalPlayer.Data.Level.Value == 250 or game.Players.LocalPlayer.Data.Level.Value <= 274 or SelectMonster == "Toga Warrior" then -- Toga Warrior
-				
-				Ms = "Toga Warrior"
-				NameQuest = "ColosseumQuest"
-				QuestLv = 1
-				NameMon = "Toga Warrior"
-				CFrameQ = CFrame.new(-1576.11743, 7.38933945, -2983.30762, 0.576966345, 1.22114863e-09, 0.816767931, -3.58496594e-10, 1, -1.24185606e-09, -0.816767931, 4.2370063e-10, 0.576966345)
-				CFrameMon = CFrame.new(-1779.97583, 44.6077499, -2736.35474, 0.984437346, 4.10396339e-08, 0.175734788, -3.62286876e-08, 1, -3.05844168e-08, -0.175734788, 2.3741821e-08, 0.984437346)
-				
-				if SelectMonster == "Toga Warrior" then
-				else
-					Next_Level_X = 275
-				end
-			elseif game.Players.LocalPlayer.Data.Level.Value == 275 or game.Players.LocalPlayer.Data.Level.Value <= 299 or SelectMonster == "Gladiator" then -- Gladiato
-				
-				Ms = "Gladiator"
-				NameQuest = "ColosseumQuest"
-				QuestLv = 2
-				NameMon = "Gladiator"
-				CFrameQ = CFrame.new(-1576.11743, 7.38933945, -2983.30762, 0.576966345, 1.22114863e-09, 0.816767931, -3.58496594e-10, 1, -1.24185606e-09, -0.816767931, 4.2370063e-10, 0.576966345)
-				CFrameMon = CFrame.new(-1274.75903, 58.1895943, -3188.16309, 0.464524001, 6.21005611e-08, 0.885560572, -4.80449414e-09, 1, -6.76054768e-08, -0.885560572, 2.71497012e-08, 0.464524001)
-				
-				SelectMonster = "Toga Warrior"
+	
 				Next_Level_X = 300
 			elseif game.Players.LocalPlayer.Data.Level.Value == 300 or game.Players.LocalPlayer.Data.Level.Value <= 324 or SelectMonster == "Military Soldier" then -- Military Soldier
 				if game.Players.LocalPlayer.Data.Level.Value >= 350 then
@@ -11381,13 +11230,19 @@ if _G.Switch_Hub_Series_R then
                                                 if game.Workspace.Enemies:FindFirstChild('Cake Prince') or game.ReplicatedStorage:FindFirstChild('Cake Prince') then
 							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 								table.insert(_G.Keep_JobX,tostring(game.JobId))
-								SendBoss('https://discord.com/api/webhooks/1308201460701593610/WZTpuZuhzJY1ZYGHL-nMLhHBQx5xGJU1GrbfI4H_I_CNZyaoSRSloTlHagOJlVVbyvL3','Cake Prince')
+								SendBoss('https://discord.com/api/webhooks/1310018190964953128/c5bJRFRvJnJKBX3uisApUVcr5eJOf_eBL7OaKk0c5qC1WagkCSgttmYCAFqieI2uBzGc','Cake Prince')
 							end
 						end
                                                 if game.Workspace.Enemies:FindFirstChild('Dough King') or game.ReplicatedStorage:FindFirstChild('Dough King') then
 							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 								table.insert(_G.Keep_JobX,tostring(game.JobId))
 								SendBoss('https://discord.com/api/webhooks/1308201460701593610/WZTpuZuhzJY1ZYGHL-nMLhHBQx5xGJU1GrbfI4H_I_CNZyaoSRSloTlHagOJlVVbyvL3','Dough King')
+							end
+						end
+                                                if game.Workspace.Enemies:FindFirstChild('Soul Reaper') or game.ReplicatedStorage:FindFirstChild('Soul Reaper') then
+							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
+								table.insert(_G.Keep_JobX,tostring(game.JobId))
+								SendBoss('https://discord.com/api/webhooks/1310018238092152862/1AHCLGFldo_Cck8anqDWF1J4cArRt4wouLonZDy-WP2cAl_WF6Mr9D80yKado6BrI-L2','Soul Reaper')
 							end
 						end
 						if game.Workspace.Enemies:FindFirstChild('rip_indra True Form') or game.ReplicatedStorage:FindFirstChild('rip_indra True Form') then
@@ -11416,7 +11271,7 @@ if _G.Switch_Hub_Series_R then
 							return
 						elseif FullMoon_S and not table.find(_G.Keep_Job,tostring(game.JobId)) and game:GetService("Lighting").LightingLayers.Night.Intensity.Value == 1 then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
-							SendFullMoon('https://discord.com/api/webhooks/1309754290922983425/mudH-7lf8pF5RsW-ni9Ekv5f1A6hCZrnmW3rO1l_azOtYaeZ58T0De2Blr0--SVZNOjF') -------full moon
+							SendFullMoon('https://discord.com/api/webhooks/1304584605520891986/lOd1zYNNM_VDJhC4ehctg7zX5lHl9S3ZhCyC-ggP1zTqiR0D--7czmIXgmbgNaHANF6X') -------full moon
 							return
 						elseif MysticIsland_S and not table.find(_G.Keep_Job,tostring(game.JobId)) then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
