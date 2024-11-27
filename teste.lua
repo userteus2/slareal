@@ -6726,7 +6726,7 @@ if _G.Switch_Hub_Series_R then
 	spawn(function()
 		while wait(1) do
 			if Three_World then
-				if game.Players.LocalPlayer.Data.Level.Value >= 2000 then
+				if game.Players.LocalPlayer.Data.Level.Value >= 1500 then
 					if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Check") == 0 and tonumber(CheckItem('Bones')) > 0 then
 						Farm_Bone = false
 						Check_Bone = false
@@ -7297,9 +7297,9 @@ if _G.Switch_Hub_Series_R then
 							wait(3)
 							if not game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") and not game.Workspace.Enemies:FindFirstChild('rip_indra True Form') and not game.ReplicatedStorage:FindFirstChild('rip_indra True Form') then
 								game.StarterGui:SetCore("SendNotification", {
-									Title = "Check Boss Spawn", 
-									Text = '99/10',
-									Icon = "rbxassetid://17002601075",
+									Title = "Teus Hub", 
+									Text = 'Check Boss Spawn',
+									Icon = "rbxassetid://114239849954263",
 									Duration = 15
 								})
 								List.Quest = false 
@@ -11195,7 +11195,6 @@ if _G.Switch_Hub_Series_R then
 
 
 	-- Webhook
-	-- Webhook
 	function SendFullMoon(vux)
 		local Mystic = nil
 		local FullMoon_X = nil
@@ -11251,11 +11250,11 @@ if _G.Switch_Hub_Series_R then
 					};
 					["description"] = "**Join Script**\n```lua\n"..tostring('game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport","'..game.JobId..'")').."\n```";
 					["author"] = {
-						["name"] = "Teus Hub (Notification)";
+						["name"] = "Teus Hub Finders";
 						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["thumbnail"] = {
-						["url"] = "https://pbs.twimg.com/media/FDsZOHhVkAUsFeJ.jpg";
+						["url"] = "https://cdn.discordapp.com/attachments/1258136405310181396/1308529443664560232/Captura_de_tela_2024-11-18_224241.png?ex=67423b02&is=6740e982&hm=a511439eb8f3be23ad4f921391db12a3cda22a6f547c2fd29596a2d3c02949fa&";
 					};
 					["footer"] = {
 						["text"] = "By Teus Hub";
@@ -11313,11 +11312,11 @@ if _G.Switch_Hub_Series_R then
 					};
 					["description"] = "**Join Script**\n```lua\n"..tostring('game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport","'..game.JobId..'")').."\n```";
 					["author"] = {
-						["name"] = "Teus Hub (Notification)";
+						["name"] = "Teus Hub Finders";
 						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["thumbnail"] = {
-						["url"] = "https://pbs.twimg.com/media/FDsZOHhVkAUsFeJ.jpg";
+						["url"] = "https://cdn.discordapp.com/attachments/1258136405310181396/1308529443664560232/Captura_de_tela_2024-11-18_224241.png?ex=67423b02&is=6740e982&hm=a511439eb8f3be23ad4f921391db12a3cda22a6f547c2fd29596a2d3c02949fa&";
 					};
 					["footer"] = {
 						["text"] = "By Teus Hub";
@@ -11355,10 +11354,22 @@ if _G.Switch_Hub_Series_R then
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" and #game.Players:GetChildren() <= 7 then
 							FullMoon_S = true
 						end
+                                                if game.Workspace.Enemies:FindFirstChild('Cake Prince') or game.ReplicatedStorage:FindFirstChild('Cake Prince') then
+							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
+								table.insert(_G.Keep_JobX,tostring(game.JobId))
+								SendBoss('https://discord.com/api/webhooks/1310018190964953128/c5bJRFRvJnJKBX3uisApUVcr5eJOf_eBL7OaKk0c5qC1WagkCSgttmYCAFqieI2uBzGc','Cake Prince')
+							end
+						end
                                                 if game.Workspace.Enemies:FindFirstChild('Dough King') or game.ReplicatedStorage:FindFirstChild('Dough King') then
 							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 								table.insert(_G.Keep_JobX,tostring(game.JobId))
 								SendBoss('https://discord.com/api/webhooks/1308201460701593610/WZTpuZuhzJY1ZYGHL-nMLhHBQx5xGJU1GrbfI4H_I_CNZyaoSRSloTlHagOJlVVbyvL3','Dough King')
+							end
+						end
+                                                if game.Workspace.Enemies:FindFirstChild('Soul Reaper') or game.ReplicatedStorage:FindFirstChild('Soul Reaper') then
+							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
+								table.insert(_G.Keep_JobX,tostring(game.JobId))
+								SendBoss('https://discord.com/api/webhooks/1310018238092152862/1AHCLGFldo_Cck8anqDWF1J4cArRt4wouLonZDy-WP2cAl_WF6Mr9D80yKado6BrI-L2','Soul Reaper')
 							end
 						end
 						if game.Workspace.Enemies:FindFirstChild('rip_indra True Form') or game.ReplicatedStorage:FindFirstChild('rip_indra True Form') then
@@ -11368,7 +11379,7 @@ if _G.Switch_Hub_Series_R then
 							end
 						end
 						if #game.Players:GetChildren() <= 3 then
-							SendFullMoon('https://discord.com/api/webhooks/1304584605520891986/lOd1zYNNM_VDJhC4ehctg7zX5lHl9S3ZhCyC-ggP1zTqiR0D--7czmIXgmbgNaHANF6X')
+							SendFullMoon('https://discord.com/api/webhooks/1309418812222738432/hdGJnM4BnV5hDcD8-uClPcqSFWf6JGxtAZ8J7lZqEystGFpdiNVXNxmQGkiTiIIBywp3') -----Low-player
 						end
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" and #game.Players:GetChildren() <= 9 then
 							local result = {}
@@ -11378,20 +11389,20 @@ if _G.Switch_Hub_Series_R then
 								table.insert(result, each)
 							end
 							if tonumber(result[1]) >= 0 and tonumber(result[1]) < 12 then
-								SendFullMoon('https://discord.com/api/webhooks/1304584605520891986/lOd1zYNNM_VDJhC4ehctg7zX5lHl9S3ZhCyC-ggP1zTqiR0D--7czmIXgmbgNaHANF6X')
+								SendFullMoon('https://discord.com/api/webhooks/1309742546083254362/rpilLS_7En7DF-wYDNphByTlz1XCmcFQmU-H6MVBEsycgKI8gCyfhD2YVTLZdrEbJt82') -----near - full -moon
 							end
 						end
 						if FullMoon_S and MysticIsland_S and not table.find(_G.Keep_Job,tostring(game.JobId)) and game:GetService("Lighting").LightingLayers.Night.Intensity.Value == 1 then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
-							SendFullMoon('https://discord.com/api/webhooks/1304584312632512573/y7EHj44WAhEazJcwHjNNuYywGKtDhpEKmRFpXxjN1D2MwAjp4pN4AUNaQ0MX_LSqceRX')
+							SendFullMoon('https://discord.com/api/webhooks/1304584312632512573/y7EHj44WAhEazJcwHjNNuYywGKtDhpEKmRFpXxjN1D2MwAjp4pN4AUNaQ0MX_LSqceRX') -- miragem + mooon full
 							return
 						elseif FullMoon_S and not table.find(_G.Keep_Job,tostring(game.JobId)) and game:GetService("Lighting").LightingLayers.Night.Intensity.Value == 1 then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
-							SendFullMoon('https://discord.com/api/webhooks/1304584605520891986/lOd1zYNNM_VDJhC4ehctg7zX5lHl9S3ZhCyC-ggP1zTqiR0D--7czmIXgmbgNaHANF6X')
+							SendFullMoon('https://discord.com/api/webhooks/1304584605520891986/lOd1zYNNM_VDJhC4ehctg7zX5lHl9S3ZhCyC-ggP1zTqiR0D--7czmIXgmbgNaHANF6X') -------full moon
 							return
 						elseif MysticIsland_S and not table.find(_G.Keep_Job,tostring(game.JobId)) then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
-							SendFullMoon('https://discord.com/api/webhooks/1304584312632512573/y7EHj44WAhEazJcwHjNNuYywGKtDhpEKmRFpXxjN1D2MwAjp4pN4AUNaQ0MX_LSqceRX')
+							SendFullMoon('https://discord.com/api/webhooks/1304584312632512573/y7EHj44WAhEazJcwHjNNuYywGKtDhpEKmRFpXxjN1D2MwAjp4pN4AUNaQ0MX_LSqceRX') ---miragem
 							return
 						end	
 						wait(10)
