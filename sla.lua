@@ -2848,21 +2848,21 @@ end)
 
 TelepiToFut = Tabs.stack:AddToggle("MyToggle", {Title = "Teleport To Fruit", Description = "Tween to fruit and take" ,Default = _G.TelepiToFut })
 TelepiToFut:OnChanged(function(Value)
-  _G.TelepiToFut = Value
-  saveSettings()
-end)
-
-spawn(function()
-  while wait(.1) do
-    if _G.TelepiToFut then
-      for i,v in pairs(game.Workspace:GetChildren()) do
-        if string.find(v.Name, "Fruit") then
-          topos(v.Handle.CFrame)
+  _G.Tween_Fruit = Value
+        saveSettings()
+    end)
+    
+    spawn(function()
+		while wait(.1) do
+			if Tween_Fruit then
+				for i,v in pairs(game.Workspace:GetChildren()) do
+					if string.find(v.Name, "Fruit") then
+						topos(v.Handle.CFrame)
+					end
+				end
+			end
         end
-      end
-    end
-  end
-end)
+    end)
 
 TelepiToFutHop = Tabs.stack:AddToggle("MyToggle", {Title = "Teleport To Fruit Hop", Description = "Tween to fruit and take" ,Default = _G.TelepiToFutHop })
 TelepiToFutHop:OnChanged(function(Value)
@@ -2872,7 +2872,7 @@ end)
 
 spawn(function()
   while wait(.1) do
-    if _G.TelepiToFut and _G.TelepiToFutHop then
+    if _G.Tween_Fruit and _G.TelepiToFutHop then
       for i,v in pairs(game.Workspace:GetChildren()) do
         if string.find(v.Name, "Fruit") then
           topos(v.Handle.CFrame)
