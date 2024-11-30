@@ -2760,8 +2760,8 @@ loadSettings()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Teus Hub",
-    SubTitle = " By Teus Scripts",
+    Title = "HadesGod [Free Premium 7 Days]",
+    SubTitle = " By ZkanixZ#0 • Hades_x112#0",
     TabWidth = 140,
     Size = UDim2.fromOffset(480, 320),
     Acrylic = false, 
@@ -2770,10 +2770,25 @@ local Window = Fluent:CreateWindow({
 })
 
 local Tabs = {
-      Fruit = Window:AddTab({ Title = "Fruit Farm", Icon = "" }),
-      support = Window:AddTab({ Title = "Server Support", Icon = "" }),
+	Fruit = Window:AddTab({ Title = "Setting", Icon = "" }),
+    Sh = Window:AddTab({ Title = "Shop", Icon = "" }),
+    Main = Window:AddTab({ Title = "Farming", Icon = "" }),
+    stack = Window:AddTab({ Title = "Stack Auto Farm", Icon = "" }), 
+    St = Window:AddTab({ Title = "Status and Server", Icon = "" }),    
+    Lc = Window:AddTab({ Title = "Travel-Map", Icon = "" }),  
+    RC = Window:AddTab({ Title = "Upgrade Race", Icon = "" }),
+    Se = Window:AddTab({ Title = "Sea Event", Icon = "" }),   
+    pvp = Window:AddTab({ Title = "Pvp-Visual", Icon = "" }),   
+    cailon = Window:AddTab({ Title = "Mirage + Kitsune", Icon = "" }),   
+    spl = Window:AddTab({ Title = "Player Status", Icon = "" }),   
+    raid = Window:AddTab({ Title = "Dungeon", Icon = "" }),
+    De = Window:AddTab({ Title = "Devil Fruits", Icon = "" }),    
+    Ms = Window:AddTab({ Title = "Misc", Icon = "" }),   
+    support = Window:AddTab({ Title = "Server Support\n Updated Logs", Icon = "" }),
 }
-print("wait tab")
+print("wait tab") 
+
+    local sex = {"KITTGAMING","ENYU_IS_PRO","FUDD10","BIGNEWS","THEGREATACE","SUB2GAMERROBOT_EXP1","STRAWHATMAIME","SUB2OFFICIALNOOBIE","SUB2NOOBMASTER123","SUB2DAIGROCK","AXIORE","TANTAIGAMIMG","STRAWHATMAINE","JCWK","FUDD10_V2","SUB2FER999","MAGICBIS","TY_FOR_WATCHING","STARCODEHEO","STAFFBATTLE","ADMIN_STRENGTH","DRAGONABUSE"}
 
 local function FPSBooster()
     local decalsyeeted = true
@@ -2827,6 +2842,8 @@ if getgenv().AntiCrash then
     print("anti crash false")
 end
     
+    Tabs.Main:AddSection("Bone and Cake Prince")
+    
     local DropdownTweenSpeed = Tabs.Main:AddDropdown("DropdownTweenSpeed", {
     Title = "Speed Tween",
     Values = {"300", "340", "350", "500", "700"},
@@ -2839,7 +2856,24 @@ DropdownTweenSpeed:OnChanged(function(Value)
     saveSettings()
 end)
 
- Tabs.Fruit:AddSection("Fruit Farm")
+TelepiToFut = Tabs.stack:AddToggle("MyToggle", {Title = "Teleport To Fruit", Description = "Tween to fruit and take" ,Default = _G.TelepiToFut })
+TelepiToFut:OnChanged(function(Value)
+  _G.TelepiToFut = Value
+  saveSettings()
+end)
+
+spawn(function()
+  while wait(.1) do
+    if _G.TelepiToFut then
+      for i,v in pairs(game.Workspace:GetChildren()) do
+        if string.find(v.Name, "Fruit") then
+          topos(v.Handle.CFrame)
+        end
+      end
+    end
+  end
+end)
+
 TelepiToFutHop = Tabs.stack:AddToggle("MyToggle", {Title = "Teleport To Fruit Hop", Description = "Tween to fruit and take" ,Default = _G.TelepiToFutHop })
 TelepiToFutHop:OnChanged(function(Value)
   _G.TelepiToFutHop = Value
@@ -2866,7 +2900,9 @@ spawn(function()
   end
 end)
 
-    Toggle = Tabs.Fruit:AddToggle("MyToggle", {Title = "Auto Random Fruit", Default = _G.RandomFruit })
+       
+       Tabs.De:AddSection("Devil Fruit Tab ")
+    Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Auto Random Fruit", Default = _G.RandomFruit })
 
     Toggle:OnChanged(function(Value)
         _G.RandomFruit = Value
@@ -2881,7 +2917,7 @@ end)
         end
 end)
     
-    Toggle = Tabs.Fruit:AddToggle("MyToggle", {Title = "Auto Store Fruit", Default = _G.AutoStoreFruit })
+    Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Auto Store Fruit", Default = _G.AutoStoreFruit })
 
     Toggle:OnChanged(function(Value)
         _G.AutoStoreFruit = Value
@@ -3040,7 +3076,7 @@ end)
   "Leopard-Leopard"
  }
     
-    Toggle = Tabs.Fruit:AddToggle("MyToggle", {Title = "Tele Fruit┊Tween", Default = Tween_Fruit })
+    Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Tele Fruit┊Tween", Default = Tween_Fruit })
 
     Toggle:OnChanged(function(Value)
         Tween_Fruit = Value
@@ -3058,19 +3094,9 @@ end)
 			end
         end
     end)
-	
-		Tabs.Fruit:AddButton({
-        Title = "Open Devil Fruit Shop",
-        Description = "",
-        Callback = function()
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetFruits")
-      	game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitShop.Visible = true
-        end
-    })
-    
 
     
-  local Rejoin = Tabs.Fruit:AddToggle("MyToggle", {Title = "Auto Rejoin If Disconnect or Kicked", Default = true })
+  local Rejoin = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Rejoin If Disconnect or Kicked", Default = true })
 Rejoin:OnChanged(function(Value)
   _G.Rejoin = Value
   saveSettings()
@@ -3091,14 +3117,14 @@ Rejoin:OnChanged(function(Value)
   end
 end)
 
-
 Tabs.support:AddButton({
         Title = "Server Discord",
         Description = "click for copy link and join",
         Callback = function()            
         setclipboard("https://discord.com/invite/H9q9RuKxqk") 
       end
-
+    })
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
 Title = "HadesGod",
 Text = "Successfully",
