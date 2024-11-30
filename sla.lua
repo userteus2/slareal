@@ -3307,6 +3307,11 @@ Tabs.support:AddButton({
       end
     })
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+game.StarterGui:SetCore("SendNotification", {
+Title = "HadesGod",
+Text = "Successfully",
+Duration = 5,
+})
 
 spawn(function()
     while wait() do
