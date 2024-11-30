@@ -2867,15 +2867,15 @@ DropdownTweenSpeed:OnChanged(function(Value)
     saveSettings()
 end)
 
-TelepiToFut = Tabs.stack:AddToggle("MyToggle", {Title = "Teleport To Fruit", Description = "Tween to fruit and take" ,Default = _G.TelepiToFut })
-TelepiToFut:OnChanged(function(Value)
+Tween_Fruit = Tabs.stack:AddToggle("MyToggle", {Title = "Teleport To Fruit", Description = "Tween to fruit and take" ,Default = _G.TelepiToFut })
+Tween_Fruit:OnChanged(function(Value)
   _G.Tween_Fruit = Value
         saveSettings()
     end)
     
     spawn(function()
 		while wait(.1) do
-			if Tween_Fruit then
+			if _G.Tween_Fruit then
 				for i,v in pairs(game.Workspace:GetChildren()) do
 					if string.find(v.Name, "Fruit") then
 						topos(v.Handle.CFrame)
@@ -2890,10 +2890,9 @@ TelepiToFutHop:OnChanged(function(Value)
   _G.TelepiToFutHop = Value
   saveSettings()
 end)
-
     spawn(function()
 		while wait(.1) do
-			if Tween_Fruit then
+			if _G.Tween_Fruit then
 				for i,v in pairs(game.Workspace:GetChildren()) do
 					if string.find(v.Name, "Fruit") then
 						topos(v.Handle.CFrame)
