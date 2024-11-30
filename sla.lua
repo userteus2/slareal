@@ -934,7 +934,8 @@ local Window = Fluent:CreateWindow({
 })
 
 local Tabs = {
-	Settings = Window:AddTab({ Title = "Setting", Icon = "" }),
+	Fruit = Window:AddTab({ Title = "Fruit Farm", Icon = "" }),
+      support = Window:AddTab({ Title = "Server Support", Icon = "" }),
 }
 print("wait tab")
 
@@ -1002,6 +1003,7 @@ DropdownTweenSpeed:OnChanged(function(Value)
     saveSettings()
 end)
 
+ Tabs.Fruit:AddSection("Fruit Farm")
 TelepiToFutHop = Tabs.stack:AddToggle("MyToggle", {Title = "Teleport To Fruit Hop", Description = "Tween to fruit and take" ,Default = _G.TelepiToFutHop })
 TelepiToFutHop:OnChanged(function(Value)
   _G.TelepiToFutHop = Value
@@ -1028,7 +1030,7 @@ spawn(function()
   end
 end)
 
-    Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Auto Random Fruit", Default = _G.RandomFruit })
+    Toggle = Tabs.Fruit:AddToggle("MyToggle", {Title = "Auto Random Fruit", Default = _G.RandomFruit })
 
     Toggle:OnChanged(function(Value)
         _G.RandomFruit = Value
@@ -1043,7 +1045,7 @@ end)
         end
 end)
     
-    Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Auto Store Fruit", Default = _G.AutoStoreFruit })
+    Toggle = Tabs.Fruit:AddToggle("MyToggle", {Title = "Auto Store Fruit", Default = _G.AutoStoreFruit })
 
     Toggle:OnChanged(function(Value)
         _G.AutoStoreFruit = Value
@@ -1202,7 +1204,7 @@ end)
   "Leopard-Leopard"
  }
     
-    Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Tele Fruit┊Tween", Default = Tween_Fruit })
+    Toggle = Tabs.Fruit:AddToggle("MyToggle", {Title = "Tele Fruit┊Tween", Default = Tween_Fruit })
 
     Toggle:OnChanged(function(Value)
         Tween_Fruit = Value
@@ -1221,7 +1223,7 @@ end)
         end
     end)
 	
-		Tabs.Ms:AddButton({
+		Tabs.Fruit:AddButton({
         Title = "Open Devil Fruit Shop",
         Description = "",
         Callback = function()
@@ -1232,7 +1234,7 @@ end)
     
 
     
-  local Rejoin = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Rejoin If Disconnect or Kicked", Default = true })
+  local Rejoin = Tabs.Fruit:AddToggle("MyToggle", {Title = "Auto Rejoin If Disconnect or Kicked", Default = true })
 Rejoin:OnChanged(function(Value)
   _G.Rejoin = Value
   saveSettings()
