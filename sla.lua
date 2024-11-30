@@ -2717,23 +2717,6 @@ L4.Image = "rbxassetid://111005674884784"
 L1.Name = "MainGui"
 L1.Parent = player:WaitForChild("PlayerGui")
 L1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-L2.Name = ""
-L2.Parent = L1
-L2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-L2.BackgroundTransparency = 0.2
-L2.BorderSizePixel = 0
-L2.Position = UDim2.new(0.1208, 0, 0.0953, 0)
-L2.Size = UDim2.new(0, 50, 0, 50)
-L2.Font = Enum.Font.LuckiestGuy
-L2.Text = ""
-L2.TextColor3 = Color3.fromRGB(255, 255, 255)
-L2.TextSize = 9.000
-L2.Draggable = true
-sound.Parent = L2
-sound.SoundId = "rbxassetid://130785805"
-L2.MouseButton1Click:Connect(function()
-    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.LeftControl, false, game)
-    sound:Play()
 end)
 print("stop tween") 
 local ScreenGui = Instance.new("ScreenGui")
