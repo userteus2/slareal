@@ -2873,29 +2873,42 @@ Tween_Fruit:OnChanged(function(Value)
         saveSettings()
     end)
     
-    spawn(function()
-		while wait(.1) do
-			if _G.Tween_Fruit then
-				for i,v in pairs(game.Workspace:GetChildren()) do
-					if string.find(v.Name, "Fruit") then
-						topos(v.Handle.CFrame)
-					end
+	spawn(function()
+	while wait(1) do
+		if _G.Tween_Fruit then
+			for i,v in pairs(game.Workspace:GetChildren()) do
+				if string.find(v.Name,'Fruit') and v:FindFirstChild('Handle') then
+					List.Fruit = true
 				end
 			end
-        end
-    end)
+			if List.Fruit then
+				repeat wait(.5)
+				until not List.Fruit
+			end
+		end)
+	end
+	end)
 
 TelepiToFutHop = Tabs.stack:AddToggle("MyToggle", {Title = "Teleport To Fruit Hop", Description = "Tween to fruit and take" ,Default = _G.TelepiToFutHop })
 TelepiToFutHop:OnChanged(function(Value)
   _G.TelepiToFutHop = Value
   saveSettings()
 end)
-    spawn(function()
-		while wait(.1) do
-			if _G.Tween_Fruit then
-				for i,v in pairs(game.Workspace:GetChildren()) do
-					if string.find(v.Name, "Fruit") then
-						topos(v.Handle.CFrame)
+	spawn(function()
+	while wait(1) do
+		if _G.Tween_Fruit then
+			for i,v in pairs(game.Workspace:GetChildren()) do
+				if string.find(v.Name,'Fruit') and v:FindFirstChild('Handle') then
+					List.Fruit = true
+				end
+			end
+			if List.Fruit then
+				repeat wait(.5)
+				until not List.Fruit
+			end
+		end)
+	end
+	end)
         elseif not string.find(v.Name, "Fruit") then
           wait(6)
           game.StarterGui:SetCore("SendNotification", {
