@@ -2770,7 +2770,7 @@ local Window = Fluent:CreateWindow({
 })
 
 local Tabs = {
-	Fruit = Window:AddTab({ Title = "Fruit Farm", Icon = "" }),
+      Fruit = Window:AddTab({ Title = "Fruit Farm", Icon = "" }),
       support = Window:AddTab({ Title = "Server Support", Icon = "" }),
 }
 print("wait tab")
