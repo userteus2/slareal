@@ -3136,15 +3136,10 @@ Tabs.support:AddButton({
         Title = "Server Discord",
         Description = "click for copy link and join",
         Callback = function()            
-        setclipboard("https://discord.com/invite/H9q9RuKxqk") 
+        setclipboard("https://discord.com/teuscommunity") 
       end
     })
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-game.StarterGui:SetCore("SendNotification", {
-Title = "HadesGod",
-Text = "Successfully",
-Duration = 5,
-})
 
 spawn(function()
     while wait() do
