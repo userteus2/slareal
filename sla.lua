@@ -3098,3 +3098,58 @@ Tabs.support:AddButton({
         Callback = function()            
         setclipboard("https://discord.com/invite/H9q9RuKxqk") 
       end
+
+    spawn(function()
+        while task.wait() do 
+            if UFFF then 
+                pcall(function()
+                    local Fastflux = getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework))[2]
+                    Fastflux.activeController.hitboxMagnitude = 55
+                    Fastflux.activeController.timeToNextAttack = 0
+                    Fastflux.activeController.attacking = false
+                    Fastflux.activeController.increment = 3
+                    Fastflux.activeController.blocking = false
+                    Fastflux.activeController.timeToNextBlock = 0
+                    Fastflux.activeController:attack()
+                    task.wait(0.2)
+                end)
+            end
+        end
+    end)
+    spawn(function()
+        while task.wait() do 
+            if UFFF then 
+                pcall(function()
+                    local Fastflux = getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework))[2]
+                    Fastflux.activeController.hitboxMagnitude = 55
+                    Fastflux.activeController.timeToNextAttack = 0
+                    Fastflux.activeController.attacking = false
+                    Fastflux.activeController.increment = 3
+                    Fastflux.activeController.blocking = false
+                    Fastflux.activeController.timeToNextBlock = 0
+                    a = math.random(1,5)
+                    if a > 1 then 
+                        game:GetService "VirtualUser":CaptureController()
+                        game:GetService "VirtualUser":Button1Down(Vector2.new(50, 50))
+                    end
+                    task.wait(0.2)
+                end)
+            end
+        end
+    end)
+    spawn(function()
+        while wait() do 
+            if UFFF then
+                pcall(function() 
+                    if CountAttack >= FastAttackSettings["CDAAT"] then 
+                        TickFastAttackF = tick()
+                        repeat wait() until tick()-TickFastAttackF >= FastAttackSettings["TimeWait"]
+                        CountAttack = 0
+                    end    
+                end)  
+            end
+        end
+    end)
+    return ReturnFunctions
+end
+return FastAttackConnectorFunction()
