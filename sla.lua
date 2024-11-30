@@ -2705,9 +2705,12 @@ local L3 = Instance.new("UICorner")
 local L4 = Instance.new("ImageLabel")
 local sound = Instance.new("Sound")
 
+-- Configura o UICorner para arredondar as bordas do botão
 L3.Name = "UICorner"
 L3.Parent = L2
+L3.CornerRadius = UDim.new(0, 10) -- Define o arredondamento das bordas do botão (ajuste o valor conforme necessário)
 
+-- Configura a imagem dentro do botão
 L4.Name = "ButtonImage"
 L4.Parent = L2
 L4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -2715,8 +2718,9 @@ L4.BackgroundTransparency = 1.000
 L4.BorderSizePixel = 0
 L4.Position = UDim2.new(0, 0, 0, 0) -- Ajusta a posição da imagem
 L4.Size = UDim2.new(1, 0, 1, 0) -- Faz a imagem ocupar todo o botão
-L4.Image = "rbxassetid://111005674884784" -- Define a imagem do botão
+L4.Image = "rbxassetid://84493753355583" -- Define a imagem do botão
 
+-- Configura o ScreenGui e o TextButton
 L1.Name = "MainGui"
 L1.Parent = player:WaitForChild("PlayerGui")
 L1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -2734,9 +2738,11 @@ L2.TextColor3 = Color3.fromRGB(255, 255, 255)
 L2.TextSize = 9.000
 L2.Draggable = true
 
+-- Configura o som
 sound.Parent = L2
 sound.SoundId = "rbxassetid://130785805"
 
+-- Função para quando o botão for clicado
 L2.MouseButton1Click:Connect(function()
     game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.LeftControl, false, game)
     sound:Play()
