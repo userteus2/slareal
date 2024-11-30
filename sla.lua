@@ -11,7 +11,7 @@ end
 game.StarterGui:SetCore(
     "SendNotification",
     {
-        Title = "HadesGod",
+        Title = "Teus",
         Text = "Loading",
         Duration = 5
     })
@@ -2725,7 +2725,7 @@ L2.BorderSizePixel = 0
 L2.Position = UDim2.new(0.1208, 0, 0.0953, 0)
 L2.Size = UDim2.new(0, 50, 0, 50)
 L2.Font = Enum.Font.LuckiestGuy
-L2.Text = "HadesGod\n Premium"
+L2.Text = "Teus Hub | Fruit Finder"
 L2.TextColor3 = Color3.fromRGB(255, 255, 255)
 L2.TextSize = 9.000
 L2.Draggable = true
@@ -2746,22 +2746,31 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.359138072, 0, -0.025062656, 0)
+TextLabel.Position = UDim2.new(0.5, -100, 0, -50)  -- Subindo um pouco para cima
 TextLabel.Size = UDim2.new(0, 200, 0, 50)
 TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "discord.gg/H9q9RuKxqk"
+TextLabel.Text = "discord.gg/teuscommunity"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 19.000
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.01, Color3.fromRGB(255, 0, 242)), ColorSequenceKeypoint.new(0.16, Color3.fromRGB(59, 200, 251)), ColorSequenceKeypoint.new(0.35, Color3.fromRGB(247, 0, 255)), ColorSequenceKeypoint.new(0.68, Color3.fromRGB(8, 255, 214)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(114, 187, 255))}
+-- Mudando para um gradiente azul escuro
+UIGradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 50)),  -- Azul escuro
+    ColorSequenceKeypoint.new(0.01, Color3.fromRGB(0, 0, 100)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.16, Color3.fromRGB(0, 0, 150)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.35, Color3.fromRGB(0, 0, 200)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.68, Color3.fromRGB(0, 0, 255)),  -- Azul
+    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 150))   -- Azul mais escuro
+}
 UIGradient.Parent = TextLabel
+
 loadSettings()
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "HadesGod [Free Premium 7 Days]",
-    SubTitle = " By ZkanixZ#0 • Hades_x112#0",
+    Title = "Teus Hub | Fruit Finder",
+    SubTitle = " By Teus Scripts",
     TabWidth = 140,
     Size = UDim2.fromOffset(480, 320),
     Acrylic = false, 
