@@ -2770,21 +2770,11 @@ local Window = Fluent:CreateWindow({
 })
 
 local Tabs = {
-	Fruit = Window:AddTab({ Title = "Setting", Icon = "" }),
-    Sh = Window:AddTab({ Title = "Shop", Icon = "" }),
     Main = Window:AddTab({ Title = "Farming", Icon = "" }),
-    stack = Window:AddTab({ Title = "Stack Auto Farm", Icon = "" }), 
-    St = Window:AddTab({ Title = "Status and Server", Icon = "" }),    
-    Lc = Window:AddTab({ Title = "Travel-Map", Icon = "" }),  
-    RC = Window:AddTab({ Title = "Upgrade Race", Icon = "" }),
-    Se = Window:AddTab({ Title = "Sea Event", Icon = "" }),   
-    pvp = Window:AddTab({ Title = "Pvp-Visual", Icon = "" }),   
-    cailon = Window:AddTab({ Title = "Mirage + Kitsune", Icon = "" }),   
-    spl = Window:AddTab({ Title = "Player Status", Icon = "" }),   
-    raid = Window:AddTab({ Title = "Dungeon", Icon = "" }),
+    stack = Window:AddTab({ Title = "Stack Auto Farm", Icon = "" }),
     De = Window:AddTab({ Title = "Devil Fruits", Icon = "" }),    
     Ms = Window:AddTab({ Title = "Misc", Icon = "" }),   
-    support = Window:AddTab({ Title = "Server Support\n Updated Logs", Icon = "" }),
+    support = Window:AddTab({ Title = "Server Support", Icon = "" }),
 }
 print("wait tab") 
 
