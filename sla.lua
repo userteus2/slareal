@@ -3086,25 +3086,6 @@ end)
   "Dragon-Dragon",
   "Leopard-Leopard"
  }
-    
-    Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Tele Fruit┊Tween", Default = Tween_Fruit })
-
-    Toggle:OnChanged(function(Value)
-        Tween_Fruit = Value
-        saveSettings()
-    end)
-    
-    spawn(function()
-		while wait(.1) do
-			if Tween_Fruit then
-				for i,v in pairs(game.Workspace:GetChildren()) do
-					if string.find(v.Name, "Fruit") then
-						topos(v.Handle.CFrame)
-					end
-				end
-			end
-        end
-    end)
 
     
   local Rejoin = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Rejoin If Disconnect or Kicked", Default = true })
