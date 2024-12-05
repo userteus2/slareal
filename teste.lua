@@ -1917,7 +1917,7 @@ end)
 ------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------
 print("esp") 
-local foldername = "Teus Hub"
+local foldername = "H4des Hub"
 local filename = foldername.."/Setting.json"
 function saveSettings()
     local HttpService = game:GetService("HttpService")
@@ -2867,33 +2867,15 @@ DropdownTweenSpeed:OnChanged(function(Value)
     saveSettings()
 end)
 
-Tween_Fruit = Tabs.stack:AddToggle("MyToggle", {Title = "Teleport To Fruit", Description = "Tween to fruit and take" ,Default = _G.TelepiToFut })
-Tween_Fruit:OnChanged(function(Value)
+TelepiToFut = Tabs.stack:AddToggle("MyToggle", {Title = "Teleport To Fruit", Description = "Tween to fruit and take" ,Default = _G.TelepiToFut })
+TelepiToFut:OnChanged(function(Value)
   _G.Tween_Fruit = Value
         saveSettings()
     end)
     
-spawn(function()
-    while wait(.1) do
-        if _G.Tweenfruit then
-            for i,v in pairs(game.Workspace:GetChildren()) do
-                if string.find(v.Name, "Fruit") then
-                    Tween(v.Handle.CFrame)
-                end
-            end
-        end
-end
-end)
-
-TelepiToFutHop = Tabs.stack:AddToggle("MyToggle", {Title = "Teleport To Fruit Hop", Description = "Tween to fruit and take" ,Default = _G.TelepiToFutHop })
-TelepiToFutHop:OnChanged(function(Value)
-  _G.TelepiToFutHop = Value
-  saveSettings()
-end)
-
 	spawn(function()
 	while wait(1) do
-		if _G.Tween_Fruit then
+		pcall(function()
 			for i,v in pairs(game.Workspace:GetChildren()) do
 				if string.find(v.Name,'Fruit') and v:FindFirstChild('Handle') then
 					List.Fruit = true
@@ -2906,11 +2888,24 @@ end)
 		end)
 	end
 	end)
+
+TelepiToFutHop = Tabs.stack:AddToggle("MyToggle", {Title = "Teleport To Fruit Hop", Description = "Tween to fruit and take" ,Default = _G.TelepiToFutHop })
+TelepiToFutHop:OnChanged(function(Value)
+  _G.TelepiToFutHop = Value
+  saveSettings()
+end)
+
+spawn(function()
+  while wait(.1) do
+    if _G.Tween_Fruit and _G.TelepiToFutHop then
+      for i,v in pairs(game.Workspace:GetChildren()) do
+        if string.find(v.Name, "Fruit") then
+          topos(v.Handle.CFrame)
         elseif not string.find(v.Name, "Fruit") then
           wait(6)
           game.StarterGui:SetCore("SendNotification", {
-          Title = "Teus Hub",
-          Text = "Server Hop..",
+          Title = "Server Hop..",
+          Text = "",
           Duration = 10,
           })
           Hop()
@@ -3095,6 +3090,25 @@ end)
   "Dragon-Dragon",
   "Leopard-Leopard"
  }
+    
+    Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Tele Fruit┊Tween", Default = Tween_Fruit })
+
+    Toggle:OnChanged(function(Value)
+        Tween_Fruit = Value
+        saveSettings()
+    end)
+    
+    spawn(function()
+		while wait(.1) do
+			if Tween_Fruit then
+				for i,v in pairs(game.Workspace:GetChildren()) do
+					if string.find(v.Name, "Fruit") then
+						topos(v.Handle.CFrame)
+					end
+				end
+			end
+        end
+    end)
 
     
   local Rejoin = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Rejoin If Disconnect or Kicked", Default = true })
