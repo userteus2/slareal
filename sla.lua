@@ -7379,12 +7379,6 @@ end
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Hop
-
-if First_Sea or Second_Sea then
-    local Mastery = Tabs.Hop:AddSection("Thid Sea Please !!!")
-end
-
-if Third_Sea then
 local ToggleFindMoon = Tabs.Hop:AddToggle("ToggleFindMoon", {Title = "Find Full Moon",Description = "Tìm trăng tròn", Default = false })
 ToggleFindMoon:OnChanged(function(Value)
     _G.AutoFindMoon = Value
