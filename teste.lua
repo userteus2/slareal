@@ -2892,11 +2892,11 @@ TelepiToFutHop:OnChanged(function(Value)
 end)
 
 spawn(function()
-    while wait(.1) do
-        if _G.Tweenfruit then
-            for i,v in pairs(game.Workspace:GetChildren()) do
-                if string.find(v.Name, "Fruit") then
-                    Tween(v.Handle.CFrame)
+  while wait(.1) do
+    if _G.Tween_Fruit and _G.TelepiToFutHop then
+      for i,v in pairs(game.Workspace:GetChildren()) do
+        if string.find(v.Name, "Fruit") then
+          topos(v.Handle.CFrame)
         elseif not string.find(v.Name, "Fruit") then
           wait(6)
           game.StarterGui:SetCore("SendNotification", {
