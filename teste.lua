@@ -206,7 +206,7 @@ if type(getgenv().Configs) ~= "table" then
 			FpsBoost = true,
 			LockFPS = 300,
 			LockFPSNow = true,
-			WhiteScreen = true
+			WhiteScreen = false
 		}
 	}
 end
