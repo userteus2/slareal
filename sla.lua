@@ -54,18 +54,6 @@ xpcall(function()
         "luxury scripts/ID/" .. game.GameId .. "/" .. game.Players.LocalPlayer.Name .. ".lua"));
 end, function()
 end)
--- [[ Marco Luraph For Fix Lags ]]
-if not LPH_OBFUSCATED then
-    LPH_JIT_MAX = (function(...)
-        return ...
-    end)
-    LPH_NO_VIRTUALIZE = (function(...)
-        return ...
-    end)
-    LPH_NO_UPVALUES = (function(...)
-        return ...
-    end)
-end
 
 -- [Anti AFK]
 
