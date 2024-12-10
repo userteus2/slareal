@@ -6752,11 +6752,14 @@ if _G.Switch_Hub_Series_R then
 		end
 	end)
 	-- Rejoin
-	game.Players.PlayerRemoving:connect(function (plr)
-		if plr == game.Players.LocalPlayer and not TleP then
-		  	game:GetService('TeleportService'):Teleport(game.PlaceId)
-		end
-	end)
+                        game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+                    if child.Name == 'ErrorPrompt' and child:FindFirstChild('MessageArea') and child.MessageArea:FindFirstChild("ErrorFrame") then
+                        game:GetService("TeleportService"):Teleport(game.PlaceId)
+                    end
+                end)
+            end
+        end
+    end)
 
 
 	--[[
