@@ -6752,7 +6752,7 @@ if _G.Switch_Hub_Series_R then
 		end
 	end)
 	-- Rejoin
-            game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+        game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
                     if child.Name == 'ErrorPrompt' and child:FindFirstChild('MessageArea') and child.MessageArea:FindFirstChild("ErrorFrame") then
                         game:GetService("TeleportService"):Teleport(game.PlaceId)
                     end
