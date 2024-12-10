@@ -1,4 +1,9 @@
+
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
+
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
 
 getgenv().Faster = { 
     ['CDK Super Fast'] = true, -- Spawn Admin / เสกแอดมิน
@@ -401,12 +406,12 @@ if _G.Switch_Hub_Series_R then
 			return bit_zes
 		end
 
-		if game:GetService("CoreGui"):FindFirstChild('Switch Hub') then
-			game:GetService("CoreGui"):FindFirstChild('Switch Hub'):Destroy()
+		if game:GetService("CoreGui"):FindFirstChild('Teus Hub') then
+			game:GetService("CoreGui"):FindFirstChild('Teus Hub'):Destroy()
 		end
 		-- Switch Hub
 		local Switch_Hub = Instance.new("ScreenGui")
-		Switch_Hub.Name = "Switch Hub"
+		Switch_Hub.Name = "Teus Hub"
 		Switch_Hub.Parent = game:GetService("CoreGui")
 		Switch_Hub.Enabled = false
 		
@@ -416,126 +421,126 @@ if _G.Switch_Hub_Series_R then
 		-- Switch Hub 7M
 		local F_Level = Instance.new("Frame")
 		F_Level.Name = "Level"
-		F_Level.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Level.Parent = game:GetService("CoreGui")["Teus Hub"]
 		F_Level.Size = UDim2.new(1, 0, 1, 0)
 		F_Level.Position = UDim2.new(0, 0, 0, 0)
 		F_Level.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Level.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Level
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.Text = "Switch Hub"
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.Size = UDim2.new(1, 0, 0, 40)
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Level.Position = UDim2.new(0.5, 0, -0.2, 0)
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Teus Hub"].Level
+		game:GetService("CoreGui")["Teus Hub"].Level.Fragments.TextColor3 = Color3.fromRGB(0, 0, 139) 
+		game:GetService("CoreGui")["Teus Hub"].Level.Fragments.Text = "Teus Hub"
+		game:GetService("CoreGui")["Teus Hub"].Level.Fragments.Size = UDim2.new(1, 0, 0, 40)
+		game:GetService("CoreGui")["Teus Hub"].Level.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Teus Hub"].Level.Position = UDim2.new(0.5, 0, -0.2, 0)
+		game:GetService("CoreGui")["Teus Hub"].Level.Fragments.TextStrokeTransparency = 1
 		
 		-- Time
 		local F_Text2 = Instance.new("Frame")
 		F_Text2.Name = "Text2"
-		F_Text2.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text2.Parent = game:GetService("CoreGui")["Teus Hub"]
 		F_Text2.Size = UDim2.new(1, 0, 1, 0)
 		F_Text2.Position = UDim2.new(0, 0, 0, 0)
 		F_Text2.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text2.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text2
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.Text = ""
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.Size = UDim2.new(1, 0, 0, 25)
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text2.Position = UDim2.new(0.5, 0, -0.1, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Teus Hub"].Text2
+		game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
+		game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.Text = ""
+		game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.Size = UDim2.new(1, 0, 0, 25)
+		game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Teus Hub"].Text2.Position = UDim2.new(0.5, 0, -0.1, 0)
+		game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.TextStrokeTransparency = 1
 		
 		-- Name
 		local F_Text = Instance.new("Frame")
 		F_Text.Name = "Text"
-		F_Text.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text.Parent = game:GetService("CoreGui")["Teus Hub"]
 		F_Text.Size = UDim2.new(1, 0, 1, 0)
 		F_Text.Position = UDim2.new(0, 0, 0, 0)
 		F_Text.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.Text = '( '..game.Players.LocalPlayer.Name..' )'
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.Size = UDim2.new(1, 0, 0, 25)
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text.Position = UDim2.new(0.5, 0, 0.14, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Teus Hub"].Text
+		game:GetService("CoreGui")["Teus Hub"].Text.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
+		game:GetService("CoreGui")["Teus Hub"].Text.Fragments.Text = '( '..game.Players.LocalPlayer.Name..' )'
+		game:GetService("CoreGui")["Teus Hub"].Text.Fragments.Size = UDim2.new(1, 0, 0, 25)
+		game:GetService("CoreGui")["Teus Hub"].Text.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Teus Hub"].Text.Position = UDim2.new(0.5, 0, 0.14, 0)
+		game:GetService("CoreGui")["Teus Hub"].Text.Fragments.TextStrokeTransparency = 1
 		-- Status
 		local F_Text3 = Instance.new("Frame")
 		F_Text3.Name = "Text3"
-		F_Text3.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text3.Parent = game:GetService("CoreGui")["Teus Hub"]
 		F_Text3.Size = UDim2.new(1, 0, 1, 0)
 		F_Text3.Position = UDim2.new(0, 0, 0, 0)
 		F_Text3.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text3.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text3
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.Text = 'Status: Farm Level.'
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.Size = UDim2.new(1, 0, 0, 28)
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text3.Position = UDim2.new(0.5, 0, 0.22, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Teus Hub"].Text3
+		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.TextColor3 = Color3.fromRGB(0, 0, 139) 
+		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.Text = 'Status: Farm Level.'
+		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.Size = UDim2.new(1, 0, 0, 28)
+		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Teus Hub"].Text3.Position = UDim2.new(0.5, 0, 0.22, 0)
+		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.TextStrokeTransparency = 1
 		-- Item Sanguine Art
 		local F_Text5 = Instance.new("Frame")
 		F_Text5.Name = "Text5"
-		F_Text5.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text5.Parent = game:GetService("CoreGui")["Teus Hub"]
 		F_Text5.Size = UDim2.new(1, 0, 1, 0)
 		F_Text5.Position = UDim2.new(0, 0, 0, 0)
 		F_Text5.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text5.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text5
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.Text = '...'
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.Size = UDim2.new(1, 0, 0, 25)
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text5.Position = UDim2.new(0.5, 0, 0.38, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Teus Hub"].Text5
+		game:GetService("CoreGui")["Teus Hub"].Text5.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
+		game:GetService("CoreGui")["Teus Hub"].Text5.Fragments.Text = '...'
+		game:GetService("CoreGui")["Teus Hub"].Text5.Fragments.Size = UDim2.new(1, 0, 0, 25)
+		game:GetService("CoreGui")["Teus Hub"].Text5.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Teus Hub"].Text5.Position = UDim2.new(0.5, 0, 0.38, 0)
+		game:GetService("CoreGui")["Teus Hub"].Text5.Fragments.TextStrokeTransparency = 1
 		-- Full Moon
 		local F_Text6 = Instance.new("Frame")
 		F_Text6.Name = "Text6"
-		F_Text6.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text6.Parent = game:GetService("CoreGui")["Teus Hub"]
 		F_Text6.Size = UDim2.new(1, 0, 1, 0)
 		F_Text6.Position = UDim2.new(0, 0, 0, 0)
 		F_Text6.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text6.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text6
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.TextColor3 = Color3.fromRGB(255,140,0)
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Size = UDim2.new(1, 0, 0, 25)
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text6.Position = UDim2.new(0.5, 0, -0.03, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Teus Hub"].Text6
+		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.TextColor3 = Color3.fromRGB(255,140,0)
+		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Size = UDim2.new(1, 0, 0, 25)
+		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Teus Hub"].Text6.Position = UDim2.new(0.5, 0, -0.03, 0)
+		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.TextStrokeTransparency = 1
 		spawn(function()
 			while wait(1) do
 				pcall(function()
 					if Three_World then
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 100% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 100% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 50% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 50% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 25% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 25% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 15% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 15% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						else 
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						end 
 						local scripttime=game.Workspace.DistributedGameTime
 						local seconds = scripttime%60
 						minutes = math.floor(scripttime/60%60)
 						hours = math.floor(scripttime/3600)
 						local tempo = string.format("%.0f Hours, %.0f Minutes, %.0f Seconds", hours ,minutes, seconds)
-						game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.Text = tempo
+						game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.Text = tempo
 					else
-						game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+						game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						local scripttime=game.Workspace.DistributedGameTime
 						local seconds = scripttime%60
 						minutes = math.floor(scripttime/60%60)
 						hours = math.floor(scripttime/3600)
 						local tempo = string.format("%.0f Hours, %.0f Minutes, %.0f Seconds", hours ,minutes, seconds)
-						game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.Text = tempo
+						game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.Text = tempo
 					end
 				end)
 			end
@@ -543,18 +548,18 @@ if _G.Switch_Hub_Series_R then
 		-- Sanguine Art
 		local F_Text4 = Instance.new("Frame")
 		F_Text4.Name = "Text4"
-		F_Text4.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text4.Parent = game:GetService("CoreGui")["Teus Hub"]
 		F_Text4.Size = UDim2.new(1, 0, 1, 0)
 		F_Text4.Position = UDim2.new(0, 0, 0, 0)
 		F_Text4.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text4.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text4
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.Text = '...'
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.Size = UDim2.new(1, 0, 0, 35)
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text4.Position = UDim2.new(0.5, 0, 0.47, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Teus Hub"].Text4
+		game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.TextColor3 = Color3.fromRGB(0, 0, 139) 
+		game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.Text = '...'
+		game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.Size = UDim2.new(1, 0, 0, 35)
+		game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Teus Hub"].Text4.Position = UDim2.new(0.5, 0, 0.47, 0)
+		game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.TextStrokeTransparency = 1
 
 		local BlurSwitch = Instance.new("BlurEffect")
 		BlurSwitch.Name = "SwitchBlur"
@@ -566,12 +571,12 @@ if _G.Switch_Hub_Series_R then
 			if not isTyping then
 				if input.KeyCode == Enum.KeyCode.B then
 					if togle_up then
-						game:GetService("CoreGui")["Switch Hub"].Enabled = false
+						game:GetService("CoreGui")["Teus Hub"].Enabled = false
 						game.Lighting.ExposureCompensation = 0
 						--BlurSwitch.Size = 0
 						togle_up = false
 					else
-						game:GetService("CoreGui")["Switch Hub"].Enabled = true
+						game:GetService("CoreGui")["Teus Hub"].Enabled = true
 						game.Lighting.ExposureCompensation = -10
 						--BlurSwitch.Size = 80
 						togle_up = true
@@ -609,7 +614,7 @@ if _G.Switch_Hub_Series_R then
 		SearchStroke.Parent = ToggleFrameUi
 		SearchStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 		SearchStroke.LineJoinMode = Enum.LineJoinMode.Round
-		SearchStroke.Color = Color3.fromRGB(0, 255, 186) 
+		SearchStroke.Color = Color3.fromRGB(0, 0, 139) 
 		SearchStroke.Transparency = 0
 		
 		UICorner.CornerRadius = UDim.new(0, 5)
@@ -621,12 +626,12 @@ if _G.Switch_Hub_Series_R then
 		ToggleImgUi.BackgroundTransparency = 1
 		ToggleImgUi.Position = UDim2.new(0.0454545468, 0, 0.125000313, 0)
 		ToggleImgUi.Size = UDim2.new(0, 35, 0, 35)
-		ToggleImgUi.Image = "rbxassetid://17260696651"
+		ToggleImgUi.Image = "rbxassetid://114239849954263"
 		ToggleImgUi.MouseButton1Click:Connect(function()
 			if togle_up then
 				ToggleImgUi.ImageTransparency = 0.3
 				uihide = true
-				game:GetService("CoreGui")["Switch Hub"].Enabled = false
+				game:GetService("CoreGui")["Teus Hub"].Enabled = false
 				game.Lighting.ExposureCompensation = 0
 				--BlurSwitch.Size = 0
 				togle_up = false
@@ -635,7 +640,7 @@ if _G.Switch_Hub_Series_R then
 			else
 				ToggleImgUi.ImageTransparency = 0.3
 				uihide = true
-				game:GetService("CoreGui")["Switch Hub"].Enabled = true
+				game:GetService("CoreGui")["Teus Hub"].Enabled = true
 				game.Lighting.ExposureCompensation = -10
 				--BlurSwitch.Size = 80
 				togle_up = true
@@ -651,7 +656,7 @@ if _G.Switch_Hub_Series_R then
 		Uitoggle.Position = UDim2.new(0.14, 0, 0.1, 0)
 		Uitoggle.Size = UDim2.new(0, 137, 0, 25)
 		Uitoggle.Font = Enum.Font.GothamSemibold
-		Uitoggle.Text = "Switch Hub Kaitun"
+		Uitoggle.Text = "Teus Hub Kaitun"
 		Uitoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
 		Uitoggle.TextSize = 12.000
 		
@@ -662,12 +667,12 @@ if _G.Switch_Hub_Series_R then
 		Yedhee.Position = UDim2.new(0.14, 0, 0.429166657, 0)
 		Yedhee.Size = UDim2.new(0, 137, 0, 25)
 		Yedhee.Font = Enum.Font.GothamSemibold
-		Yedhee.Text = "White Screen (B)"
-		Yedhee.TextColor3 = Color3.fromRGB(0, 255, 186) 
+		Yedhee.Text = "Account Status"
+		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 200) 
 		Yedhee.TextSize = 12.000
 		
-		if game.CoreGui:FindFirstChild('Switch Hub C') then
-			game.CoreGui:FindFirstChild('Switch Hub C'):Destroy()
+		if game.CoreGui:FindFirstChild('Teus Hub C') then
+			game.CoreGui:FindFirstChild('Teus Hub C'):Destroy()
 		end
 		local function click(a)
 			game:GetService("VirtualInputManager"):SendMouseButtonEvent(a.AbsolutePosition.X+a.AbsoluteSize.X/2.5,a.AbsolutePosition.Y+50,0,true,a,1)
@@ -688,8 +693,8 @@ if _G.Switch_Hub_Series_R then
 			repeat 
 				for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Right.Content.ScrollingFrame.Frame:GetDescendants()) do
 					if v.Name == 'Background' and tostring(v.BackgroundColor) == 'Bright red' and not table.find(keep_all_name,v.Parent.ItemName.Text) then 
-						v.Parent:Clone().Parent = game:GetService("CoreGui")["Switch Hub C"][Folder]
-						game:GetService("CoreGui")["Switch Hub C"][Folder][v.Parent.Name].Name = v.Parent.ItemName.Text
+						v.Parent:Clone().Parent = game:GetService("CoreGui")["Teus Hub C"][Folder]
+						game:GetService("CoreGui")["Teus Hub C"][Folder][v.Parent.Name].Name = v.Parent.ItemName.Text
 						table.insert(keep_all_name,v.Parent.ItemName.Text)
 					end
 				end
@@ -707,17 +712,17 @@ if _G.Switch_Hub_Series_R then
 		end
 		-- Switch Hub C
 		local Switch_Hub = Instance.new("ScreenGui")
-		Switch_Hub.Name = "Switch Hub C"
+		Switch_Hub.Name = "Teus Hub C"
 		Switch_Hub.Parent = game:GetService("CoreGui")
 		-- Fruit Inventory Backpack
 		local F_FruitB = Instance.new("Frame")
 		F_FruitB.Name = "FruitB"
-		F_FruitB.Parent = game:GetService("CoreGui")["Switch Hub C"]
+		F_FruitB.Parent = game:GetService("CoreGui")["Teus Hub C"]
 		F_FruitB.Size = UDim2.new(0.17, 0, 0, 0)
 		F_FruitB.Position = UDim2.new(0.02, 0, 0.03, 0)
 		F_FruitB.Transparency = 1
 		local uig = Instance.new("UIGridLayout")
-		uig.Parent = game:GetService("CoreGui")["Switch Hub C"].FruitB
+		uig.Parent = game:GetService("CoreGui")["Teus Hub C"].FruitB
 		uig.CellSize = UDim2.new(0, 55, 0, 55)
 		--[[
 		click(game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton) -- open menu
@@ -727,14 +732,14 @@ if _G.Switch_Hub_Series_R then
 		CheckPhoto('Treasure')
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Visible = true
 		Load_Info('Blox Fruit','FruitB')
-		game:GetService("CoreGui")["Switch Hub C"].FruitB.Visible = true
+		game:GetService("CoreGui")["Teus Hub C"].FruitB.Visible = true
 		click(game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton) -- open menu
 		]]
 		wait(.5)
 		if _G.Setting['Black Screen'] then
 			ToggleImgUi.ImageTransparency = 0.3
 			uihide = true
-			game:GetService("CoreGui")["Switch Hub"].Enabled = true
+			game:GetService("CoreGui")["Teus Hub"].Enabled = true
 			game.Lighting.ExposureCompensation = -10
 			--BlurSwitch.Size = 80
 			togle_up = true
@@ -742,14 +747,14 @@ if _G.Switch_Hub_Series_R then
 			ToggleImgUi.ImageTransparency = 0
 		end
 		function Set_Status_X(vu)
-			game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.Text = vu
+			game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.Text = vu
 		end
 		--[[
 		local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/alichnochi/code/main/notifycation.lua"))()
 		local Notify = AkaliNotif.Notify
 		Notify({
 			Description = '✅ Turn on and off (White Screen "Y")',
-			Title = "Switch Hub Kaitun | "..tostring(game.Players.LocalPlayer.Name),
+			Title = "Teus Hub Kaitun | "..tostring(game.Players.LocalPlayer.Name),
 			Duration = 5
 		})
 		Notify({
@@ -758,7 +763,7 @@ if _G.Switch_Hub_Series_R then
 			Duration = 5
 		})
 		local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/alichnochi/code/main/notification.status.lua", true))()
-		status_pass = Notification.new("message", 'Switch Hub Kaitun | ', "Status: ...")
+		status_pass = Notification.new("message", 'Teus Hub Kaitun | ', "Status: ...")
 		status_pass:changeColor(Color3.fromRGB(15,15,15),Color3.fromRGB(42, 170, 138),Color3.fromRGB(255, 244, 0))
 		spawn(function()
 			while wait(1) do
@@ -810,7 +815,7 @@ if _G.Switch_Hub_Series_R then
 	end
 	
 	local PepsisWorld = library:CreateWindow({
-		Name = "Switch Hub [ Kaitun ]",
+		Name = "Teus Hub [ Kaitun ]",
 		Themeable = {	
 		}
 	})
@@ -1122,11 +1127,11 @@ if _G.Switch_Hub_Series_R then
 			pcall(function()
 				Tween = game:GetService("TweenService"):Create(
 					game.Players.LocalPlayer.Character.HumanoidRootPart,
-					TweenInfo.new(Distance/350, Enum.EasingStyle.Linear),
+					TweenInfo.new(Distance/330, Enum.EasingStyle.Linear),
 					{CFrame = Pos}
 				)
 				Tween:Play()
-				if Distance <= 350 then
+				if Distance <= 330 then
 					Tween:Cancel()
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Pos
 				end
@@ -1503,7 +1508,7 @@ if _G.Switch_Hub_Series_R then
 			end
 		end
 	end
-	Bone_S:Set(' Bone : '..CheckItem('Bones'))
+	Bone_S:Set(' Bones : '..CheckItem('Bones'))
 	Ectoplasm_S:Set(' Ectoplasm : '..CheckItem('Ectoplasm'))
 	if Three_World then	
 		Elite_Hunter_S:Set(' Elite Hunter : '..tostring(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("EliteHunter", "Progress")))
@@ -2189,7 +2194,7 @@ if _G.Switch_Hub_Series_R then
 				CFrameQ = CFrame.new(1059.37195, 15.4495068, 1550.4231, 0.939700544, -0, -0.341998369, 0, 1, -0, 0.341998369, 0, 0.939700544)
 				CFrameMon = CFrame.new(1353.44885, 3.40935516, 1376.92029, 0.776053488, -6.97791975e-08, 0.630666852, 6.99138596e-08, 1, 2.4612488e-08, -0.630666852, 2.49917598e-08, 0.776053488)
 				Next_Level_X = 10
-			elseif game.Players.LocalPlayer.Data.Level.Value == 10 or game.Players.LocalPlayer.Data.Level.Value <= 50 then
+			elseif game.Players.LocalPlayer.Data.Level.Value == 10 or game.Players.LocalPlayer.Data.Level.Value <= 40 then
 				Ms = "Shanda"
 				NameQuest = "SkyExp1Quest"
 				QuestLv = 2
@@ -3760,7 +3765,7 @@ if _G.Switch_Hub_Series_R then
 			end
 			if Old_World and game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then
 				local Lv = game.Players.LocalPlayer.Data.Level.Value
-				if game.Players.LocalPlayer.Data.Level.Value >= 100 and game.Players.LocalPlayer.Data.Level.Value < 650 and #game.Players:GetPlayers() > 5 then
+				if game.Players.LocalPlayer.Data.Level.Value >= 50 and game.Players.LocalPlayer.Data.Level.Value < 650 and #game.Players:GetPlayers() > 5 then
 					if string.find(tostring(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("PlayerHunter")),'We') then
 						if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
 							local at_time = 0
@@ -6721,7 +6726,7 @@ if _G.Switch_Hub_Series_R then
 	spawn(function()
 		while wait(1) do
 			if Three_World then
-				if game.Players.LocalPlayer.Data.Level.Value >= 2000 then
+				if game.Players.LocalPlayer.Data.Level.Value >= 1500 then
 					if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Check") == 0 and tonumber(CheckItem('Bones')) > 0 then
 						Farm_Bone = false
 						Check_Bone = false
@@ -6818,28 +6823,28 @@ if _G.Switch_Hub_Series_R then
 				-- Main
 				local ris_text = ''
 				if God_Human_H then
-					ris_text = ris_text..'👊'
+					ris_text = ris_text..' GDH '
 				end
 				if Cursed_Dual_Katana_H then
-					ris_text = ris_text..' ⚔️'
+					ris_text = ris_text..' CDK '
 				end
 				if Soul_Guitar_H then
-					ris_text = ris_text..' 🎸'
+					ris_text = ris_text..' SGT '
 				end 
 				if Shark_Anchor_H then
-					ris_text = ris_text..' ⚓'
+					ris_text = ris_text..' SHARK ANCHOR '
 				end
 				if ris_text ~= '' then
 					if Mirror_Fractal_H then
-						ris_text = ris_text..' 🧩'
+						ris_text = ris_text..' MF '
 					end
 					if Valkyrie_Helmet_H then
-						ris_text = ris_text..' 🎩'
+						ris_text = ris_text..' VH '
 					end
 					if Quest_Race_V4_H then
-						ris_text = ris_text..' 🕹️'
+						ris_text = ris_text..' PULL LEVER '
 					end
-					game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.Text  = ris_text
+					game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.Text  = ris_text
 				end
 				local ris_text = ''
 				if RGB_H then
@@ -6890,7 +6895,7 @@ if _G.Switch_Hub_Series_R then
 						ris_text = ris_text..result[1]
 					end
 				end
-				game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.Text = ris_text
+				game:GetService("CoreGui")["Teus Hub"].Text5.Fragments.Text = ris_text
 				wait(300)
 			end)
 		end
@@ -7300,9 +7305,9 @@ if _G.Switch_Hub_Series_R then
 							wait(3)
 							if not game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") and not game.Workspace.Enemies:FindFirstChild('rip_indra True Form') and not game.ReplicatedStorage:FindFirstChild('rip_indra True Form') then
 								game.StarterGui:SetCore("SendNotification", {
-									Title = "Check Boss Spawn", 
-									Text = '99/10',
-									Icon = "rbxassetid://17002601075",
+									Title = "Teus Hub", 
+									Text = 'Check Boss Spawn',
+									Icon = "rbxassetid://114239849954263",
 									Duration = 15
 								})
 								List.Quest = false 
@@ -11197,7 +11202,6 @@ if _G.Switch_Hub_Series_R then
 	end)
 
 
-
 	-- Webhook
 	function SendFullMoon(vux)
 		local Mystic = nil
@@ -11231,7 +11235,7 @@ if _G.Switch_Hub_Series_R then
 		local data = {
 			["embeds"] = {
 				{
-					["color"] = tonumber(0xffffff);
+					["color"] = tonumber(0x800080);
 					["fields"] = {
 						{
 							["name"] = "Server Id";
@@ -11254,15 +11258,15 @@ if _G.Switch_Hub_Series_R then
 					};
 					["description"] = "**Join Script**\n```lua\n"..tostring('game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport","'..game.JobId..'")').."\n```";
 					["author"] = {
-						["name"] = "Switch Hub (Notification)";
-						["icon_url"] = "https://media.discordapp.net/attachments/1167889685411016756/1215942962467573860/SW.jpg?ex=65fe9621&is=65ec2121&hm=12d96eeae682639bd3987b5163ac2d2245d3fe09ad6d90a3a06e2a5fc5d98d90&=&format=webp&width=662&height=662";
+						["name"] = "Teus Hub Finders";
+						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["thumbnail"] = {
-						["url"] = "https://pbs.twimg.com/media/FDsZOHhVkAUsFeJ.jpg";
+						["url"] = "https://cdn.discordapp.com/attachments/1258136405310181396/1308529443664560232/Captura_de_tela_2024-11-18_224241.png?ex=67423b02&is=6740e982&hm=a511439eb8f3be23ad4f921391db12a3cda22a6f547c2fd29596a2d3c02949fa&";
 					};
 					["footer"] = {
-						["text"] = "By Switch Hub";
-						["icon_url"] = "https://media.discordapp.net/attachments/1167889685411016756/1215942962467573860/SW.jpg?ex=65fe9621&is=65ec2121&hm=12d96eeae682639bd3987b5163ac2d2245d3fe09ad6d90a3a06e2a5fc5d98d90&=&format=webp&width=662&height=662";
+						["text"] = "https://discord.gg/teuscommunity";
+						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["timestamp"] = DateTime.now():ToIsoDate()
 				}
@@ -11298,7 +11302,7 @@ if _G.Switch_Hub_Series_R then
 		local data = {
 			["embeds"] = {
 				{
-					["color"] = tonumber(0xffffff);
+					["color"] = tonumber(0x800080);
 					["fields"] = {
 						{
 							["name"] = "Server Id";
@@ -11316,15 +11320,15 @@ if _G.Switch_Hub_Series_R then
 					};
 					["description"] = "**Join Script**\n```lua\n"..tostring('game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport","'..game.JobId..'")').."\n```";
 					["author"] = {
-						["name"] = "Switch Hub (Notification)";
-						["icon_url"] = "https://media.discordapp.net/attachments/1167889685411016756/1215942962467573860/SW.jpg?ex=65fe9621&is=65ec2121&hm=12d96eeae682639bd3987b5163ac2d2245d3fe09ad6d90a3a06e2a5fc5d98d90&=&format=webp&width=662&height=662";
+						["name"] = "Teus Hub Finders";
+						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["thumbnail"] = {
-						["url"] = "https://pbs.twimg.com/media/FDsZOHhVkAUsFeJ.jpg";
+						["url"] = "https://cdn.discordapp.com/attachments/1258136405310181396/1308529443664560232/Captura_de_tela_2024-11-18_224241.png?ex=67423b02&is=6740e982&hm=a511439eb8f3be23ad4f921391db12a3cda22a6f547c2fd29596a2d3c02949fa&";
 					};
 					["footer"] = {
-						["text"] = "By Switch Hub";
-						["icon_url"] = "https://media.discordapp.net/attachments/1167889685411016756/1215942962467573860/SW.jpg?ex=65fe9621&is=65ec2121&hm=12d96eeae682639bd3987b5163ac2d2245d3fe09ad6d90a3a06e2a5fc5d98d90&=&format=webp&width=662&height=662";
+						["text"] = "https://discord.gg/teuscommunity";
+						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["timestamp"] = DateTime.now():ToIsoDate()
 				}
@@ -11358,14 +11362,32 @@ if _G.Switch_Hub_Series_R then
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" and #game.Players:GetChildren() <= 7 then
 							FullMoon_S = true
 						end
+                                                if game.Workspace.Enemies:FindFirstChild('Cake Prince') or game.ReplicatedStorage:FindFirstChild('Cake Prince') then
+							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
+								table.insert(_G.Keep_JobX,tostring(game.JobId))
+								SendBoss('https://discord.com/api/webhooks/1313591233964281947/pw3lSeHxC_G0gkKXuC0gYj0PrSJudz5O6449UTZ0_t1EQMSX7a7zbbVKiBQ5SMr2jiIO','Cake Prince')
+							end
+						end
+                                                if game.Workspace.Enemies:FindFirstChild('Dough King') or game.ReplicatedStorage:FindFirstChild('Dough King') then
+							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
+								table.insert(_G.Keep_JobX,tostring(game.JobId))
+								SendBoss('https://discord.com/api/webhooks/1313591233964281947/pw3lSeHxC_G0gkKXuC0gYj0PrSJudz5O6449UTZ0_t1EQMSX7a7zbbVKiBQ5SMr2jiIO','Dough King')
+							end
+						end
+                                                if game.Workspace.Enemies:FindFirstChild('Soul Reaper') or game.ReplicatedStorage:FindFirstChild('Soul Reaper') then
+							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
+								table.insert(_G.Keep_JobX,tostring(game.JobId))
+								SendBoss('https://discord.com/api/webhooks/1313591233964281947/pw3lSeHxC_G0gkKXuC0gYj0PrSJudz5O6449UTZ0_t1EQMSX7a7zbbVKiBQ5SMr2jiIO','Soul Reaper')
+							end
+						end
 						if game.Workspace.Enemies:FindFirstChild('rip_indra True Form') or game.ReplicatedStorage:FindFirstChild('rip_indra True Form') then
 							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 								table.insert(_G.Keep_JobX,tostring(game.JobId))
-								SendBoss('https://discord.com/api/webhooks/1221652773091807264/N-tNF6oN_ISWQIkcaveueLDDPUz8erLg0gkga7n2fH1L0GD8FdfdUGs9kDgv_H2eR2Rx','rip_indra True Form')
+								SendBoss('https://discord.com/api/webhooks/1313591233964281947/pw3lSeHxC_G0gkKXuC0gYj0PrSJudz5O6449UTZ0_t1EQMSX7a7zbbVKiBQ5SMr2jiIO','rip_indra True Form')
 							end
 						end
 						if #game.Players:GetChildren() <= 3 then
-							SendFullMoon('https://discord.com/api/webhooks/1221652705513046087/4ur0toVQ-hLOk1ceKZpDql2PBKoCrBGETwy4doN9-a4PfuExB5juZ9zaHxYvTzndiAGS')
+							SendFullMoon('https://discord.com/api/webhooks/1313592426769813504/CM3UN1NYHHpNUzi9Q6HIXV4sJwcSgxJjdmN_tE5Tfczyco4c1oRxE4X-CcJ93JZ5jcku')
 						end
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" and #game.Players:GetChildren() <= 9 then
 							local result = {}
@@ -11375,20 +11397,20 @@ if _G.Switch_Hub_Series_R then
 								table.insert(result, each)
 							end
 							if tonumber(result[1]) >= 0 and tonumber(result[1]) < 12 then
-								SendFullMoon('https://discord.com/api/webhooks/1221652726337896559/Oh6DerE386fvwmsezJC6g61N9eeEAt5DX0VP6DH6OZn61PE-to82F6lIJoedksEChVpL')
+								SendFullMoon('https://discord.com/api/webhooks/1313593212820131911/MOX0CN4pWrkl7up9HV_7OezMDwbthc6NExorOjpHx37pAnU7dYTVn3JMHqoYYJVJh6RY')
 							end
 						end
 						if FullMoon_S and MysticIsland_S and not table.find(_G.Keep_Job,tostring(game.JobId)) and game:GetService("Lighting").LightingLayers.Night.Intensity.Value == 1 then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
-							SendFullMoon('https://discord.com/api/webhooks/1215929211055771708/clo4RKpsZATTpTh1z2QxaZm26SpwcpGanx_Rri7WPvQfrpuXZkGMldMDqHJwDutYFGEQ')
+							SendFullMoon('https://discord.com/api/webhooks/1313596484821844018/4NuDze4uu6XU-AndoEtfWPrb-Z9TKUNp6H4qzALdqTNnIOC-15XbXiAS4JIEj9T_ooeM')
 							return
 						elseif FullMoon_S and not table.find(_G.Keep_Job,tostring(game.JobId)) and game:GetService("Lighting").LightingLayers.Night.Intensity.Value == 1 then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
-							SendFullMoon('https://discord.com/api/webhooks/1215929162569617418/eOsglix-5u-gtUDn8wT_BclQuXSflRCT2E3qL9wlJx6eI3umzO2TXCVezCWBwydh-uYR')
+							SendFullMoon('https://discord.com/api/webhooks/1313595074348843090/MxgjOINiDSd7S8WdvWkT6CrbMbhGQMHWfvFOHHy_2x3BttvWqWLFPHPk5qs5HfYtXC_f')
 							return
 						elseif MysticIsland_S and not table.find(_G.Keep_Job,tostring(game.JobId)) then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
-							SendFullMoon('https://discord.com/api/webhooks/1215929078532542535/7ykd5BrmfvV7ewPwZ1rXilB-5u1qOMKBPr8P2eKXpzmGnejQ7hji13V4Et7eV64tACun')
+							SendFullMoon('https://discord.com/api/webhooks/1313596484821844018/4NuDze4uu6XU-AndoEtfWPrb-Z9TKUNp6H4qzALdqTNnIOC-15XbXiAS4JIEj9T_ooeM')
 							return
 						end	
 						wait(10)
@@ -11403,13 +11425,13 @@ if _G.Switch_Hub_Series_R then
 					if game.Workspace.Enemies:FindFirstChild('Cursed Captain') or game.ReplicatedStorage:FindFirstChild('Cursed Captain') then
 						if #game.Players:GetChildren() <= 10 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 							table.insert(_G.Keep_JobX,tostring(game.JobId))
-							SendBoss('https://discord.com/api/webhooks/1221652750186713211/lx8EsPYmqEeswOLC0Mc6B6XkyDd9npXQ7Jq45PFeVjEaNMEWsqSSqwfh3qe5UJINPFhC','Cursed Captain')
+							SendBoss('https://discord.com/api/webhooks/1313591233964281947/pw3lSeHxC_G0gkKXuC0gYj0PrSJudz5O6449UTZ0_t1EQMSX7a7zbbVKiBQ5SMr2jiIO','Cursed Captain')
 						end
 					end
 					if game.Workspace.Enemies:FindFirstChild('Darkbeard') or game.ReplicatedStorage:FindFirstChild('Darkbeard') then
 						if #game.Players:GetChildren() <= 10 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 							table.insert(_G.Keep_JobX,tostring(game.JobId))
-							SendBoss('https://discord.com/api/webhooks/1221652796277915751/PoTljiAd5tS62T0QiKLogngm2uieZTdo1RtHzJXDEsA7aETLBvHBKNPfSNEVw1xYsKG-','Darkbeard')
+							SendBoss('https://discord.com/api/webhooks/1313591233964281947/pw3lSeHxC_G0gkKXuC0gYj0PrSJudz5O6449UTZ0_t1EQMSX7a7zbbVKiBQ5SMr2jiIO','Darkbeard')
 						end
 					end
 				end)
@@ -11418,3 +11440,40 @@ if _G.Switch_Hub_Series_R then
 	end
 
 end
+---------
+game.StarterGui:SetCore(
+    "SendNotification",
+    {
+        Title = "Teus Hub",
+        Text = "Loading",
+        Duration = 7
+    })
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.5, -100, 0, -50)  -- Subindo um pouco para cima
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "discord.gg/teuscommunity"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 19.000
+
+-- Mudando para um gradiente azul escuro
+UIGradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 50)),  -- Azul escuro
+    ColorSequenceKeypoint.new(0.01, Color3.fromRGB(0, 0, 100)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.16, Color3.fromRGB(0, 0, 150)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.35, Color3.fromRGB(0, 0, 200)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.68, Color3.fromRGB(0, 0, 255)),  -- Azul
+    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 150))   -- Azul mais escuro
+}
+UIGradient.Parent = TextLabel
+
+loadSettings()
