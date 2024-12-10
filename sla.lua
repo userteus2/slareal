@@ -3570,7 +3570,7 @@ if _G.Switch_Hub_Series_R then
 				FarmBoss_L = false
 			end
 		elseif game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true and Ms ~= nil then
-			if game.Players.LocalPlayer.Data.Level.Value <= 100 then
+			if game.Players.LocalPlayer.Data.Level.Value <= 50 then
 				if game.Players.LocalPlayer.Data.Level.Value >= Next_Level_X then
 					SelectMonster = nil
 					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
