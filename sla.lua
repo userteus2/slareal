@@ -1122,11 +1122,11 @@ if _G.Switch_Hub_Series_R then
 			pcall(function()
 				Tween = game:GetService("TweenService"):Create(
 					game.Players.LocalPlayer.Character.HumanoidRootPart,
-					TweenInfo.new(Distance/300, Enum.EasingStyle.Linear),
+					TweenInfo.new(Distance/350, Enum.EasingStyle.Linear),
 					{CFrame = Pos}
 				)
 				Tween:Play()
-				if Distance <= 300 then
+				if Distance <= 350 then
 					Tween:Cancel()
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Pos
 				end
