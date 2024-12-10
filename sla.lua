@@ -11354,19 +11354,19 @@ if _G.Switch_Hub_Series_R then
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" and #game.Players:GetChildren() <= 7 then
 							FullMoon_S = true
 						end
-            if game.Workspace.Enemies:FindFirstChild('Cake Prince') or game.ReplicatedStorage:FindFirstChild('Cake Prince') then
+                                                if game.Workspace.Enemies:FindFirstChild('Cake Prince') or game.ReplicatedStorage:FindFirstChild('Cake Prince') then
 							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 								table.insert(_G.Keep_JobX,tostring(game.JobId))
 								SendBoss('https://discord.com/api/webhooks/1313591233964281947/pw3lSeHxC_G0gkKXuC0gYj0PrSJudz5O6449UTZ0_t1EQMSX7a7zbbVKiBQ5SMr2jiIO','Cake Prince')
 							end
 						end
-            if game.Workspace.Enemies:FindFirstChild('Dough King') or game.ReplicatedStorage:FindFirstChild('Dough King') then
+                                                if game.Workspace.Enemies:FindFirstChild('Dough King') or game.ReplicatedStorage:FindFirstChild('Dough King') then
 							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 								table.insert(_G.Keep_JobX,tostring(game.JobId))
 								SendBoss('https://discord.com/api/webhooks/1313591233964281947/pw3lSeHxC_G0gkKXuC0gYj0PrSJudz5O6449UTZ0_t1EQMSX7a7zbbVKiBQ5SMr2jiIO','Dough King')
 							end
 						end
-            if game.Workspace.Enemies:FindFirstChild('Soul Reaper') or game.ReplicatedStorage:FindFirstChild('Soul Reaper') then
+                                                if game.Workspace.Enemies:FindFirstChild('Soul Reaper') or game.ReplicatedStorage:FindFirstChild('Soul Reaper') then
 							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 								table.insert(_G.Keep_JobX,tostring(game.JobId))
 								SendBoss('https://discord.com/api/webhooks/1313591233964281947/pw3lSeHxC_G0gkKXuC0gYj0PrSJudz5O6449UTZ0_t1EQMSX7a7zbbVKiBQ5SMr2jiIO','Soul Reaper')
