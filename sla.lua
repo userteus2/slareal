@@ -419,92 +419,81 @@ if _G.Switch_Hub_Series_R then
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.BottomHUDList.SafeZone.Visible = false
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.Code.Visible = false
 		-- Switch Hub 7M
-ScreenGui = Instance.new("ScreenGui")
+               ScreenGui = Instance.new("ScreenGui")
 
-Frame = Instance.new("Frame")
+               Frame = Instance.new("Frame")
 
-UIStroke = Instance.new("UIStroke")
-UIGradient = Instance.new("UIGradient")
-UICorner = Instance.new("UICorner")
-TextLabel = Instance.new("TextLabel")
-UIGradient1 = Instance.new("UIGradient")
-ImageLabel = Instance.new("ImageButton")
-adiadi = true
-ImageLabel.Activated:Connect(function()
-    adiadi = not adiadi
-    game:GetService("RunService"):Set3dRenderingEnabled(adiadi)
-end)
+               UIStroke = Instance.new("UIStroke")
+               UIGradient = Instance.new("UIGradient")
+               UICorner = Instance.new("UICorner")
+               TextLabel = Instance.new("TextLabel")
+               UIGradient1 = Instance.new("UIGradient")
+               TextLabel1 = Instance.new("TextLabel")
+               UIGradient2 = Instance.new("UIGradient")
+               ImageLabel = Instance.new("ImageButton")
+               adiadi = true
+               ImageLabel.Activated:Connect(function()
+               adiadi = not adiadi
+               game:GetService("RunService"):Set3dRenderingEnabled(adiadi)
+       end)
 
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.Parent = game:GetService("CoreGui")
+              ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+              ScreenGui.Parent = game:GetService("CoreGui")
 
-Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BackgroundTransparency = 0.5
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.499250829, 0, 0.101725562, 0)
-Frame.Size = UDim2.new(0, 511, 0, 76)
-Frame.Parent = ScreenGui
+              Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+              Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+              Frame.BackgroundTransparency = 0.5
+              Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+              Frame.BorderSizePixel = 0
+              Frame.Position = UDim2.new(0.499250829, 0, 0.101725562, 0) -- Mais para cima
+              Frame.Size = UDim2.new(0, 511, 0, 76)
+              Frame.Parent = ScreenGui
 
-UIStroke.Color = Color3.fromRGB(255, 255, 255)
-UIStroke.Thickness = 1.5
-UIStroke.Parent = Frame
+              UIStroke.Color = Color3.fromRGB(255, 255, 255)
+              UIStroke.Thickness = 1.5
+              UIStroke.Parent = Frame
 
-UIGradient.Color = ColorSequence.new{
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(15.000000055879354, 255, 255)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(207.00000286102295, 62.00000010430813, 255))
-}
-UIGradient.Parent = UIStroke
+              UIGradient.Color = ColorSequence.new{
+              ColorSequenceKeypoint.new(0, Color3.fromRGB(15.000000055879354, 255, 255)),
+              ColorSequenceKeypoint.new(1, Color3.fromRGB(207.00000286102295, 62.00000010430813, 255))
+              }
+              UIGradient.Parent = UIStroke
 
-UICorner.CornerRadius = UDim.new(0, 5)
-UICorner.Parent = Frame
+              UICorner.CornerRadius = UDim.new(0, 5)
+              UICorner.Parent = Frame
 
-TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "Teus Hub Kaitun"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 20
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.0199637525, 0, 0.276315689, 0)
-TextLabel.Size = UDim2.new(0, 489, 0, 11)
-TextLabel.Parent = Frame
+              TextLabel.Font = Enum.Font.FredokaOne
+              TextLabel.Text = "Teus Hub Kaitun"
+              TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+              TextLabel.TextSize = 20
+              TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+              TextLabel.BackgroundTransparency = 1
+              TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+              TextLabel.BorderSizePixel = 0
+              TextLabel.Position = UDim2.new(0.0199637525, 0, 0.276315689, 0)
+              TextLabel.Size = UDim2.new(0, 489, 0, 11)
+              TextLabel.Parent = Frame
 
-UIGradient1.Color = ColorSequence.new{
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(15.000000055879354, 255, 255)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(207.00000286102295, 62.00000010430813, 255))
-}
-UIGradient1.Parent = TextLabel
+              UIGradient1.Color = ColorSequence.new{
+              ColorSequenceKeypoint.new(0, Color3.fromRGB(15.000000055879354, 255, 255)),
+              ColorSequenceKeypoint.new(1, Color3.fromRGB(207.00000286102295, 62.00000010430813, 255))
+              }
+		-- Status
+		local F_Text3 = Instance.new("Frame")
+		F_Text3.Name = "Text3"
+		F_Text3.Parent = game:GetService("CoreGui")["Teus Hub"]
+		F_Text3.Size = UDim2.new(1, 0, 1, 0)
+		F_Text3.Position = UDim2.new(0, 0, 0, 0)
+		F_Text3.AnchorPoint = Vector2.new(0.5, 0.5)
+		F_Text3.Transparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Teus Hub"].Text3
+		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.TextColor3 = Color3.fromRGB(0, 0, 139) 
+		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.Text = 'Status: None'
+		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.Size = UDim2.new(1, 0, 0, 28)
+		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Teus Hub"].Text3.Position = UDim2.new(0.0199637525, 0, 0.539473593, 0)
+		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.TextStrokeTransparency = 1
 
-ImageLabel.Image = "rbxassetid://111005674884784"
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.448140889, 0, -0.473684222, 0)
-ImageLabel.Size = UDim2.new(0, 50, 0, 50)
-ImageLabel.Parent = Frame
-
--- Adicionando o novo "Text3" com o conteúdo desejado
-local F_Text3 = Instance.new("Frame")
-F_Text3.Name = "Text3"
-F_Text3.Parent = ScreenGui
-F_Text3.Size = UDim2.new(1, 0, 1, 0)
-F_Text3.Position = UDim2.new(0, 0, 0, 0)
-F_Text3.AnchorPoint = Vector2.new(0.5, 0.5)
-F_Text3.BackgroundTransparency = 1
-
-local FragmentsClone = game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone()
-FragmentsClone.Parent = F_Text3
-FragmentsClone.TextColor3 = Color3.fromRGB(0, 0, 139)
-FragmentsClone.Text = "Status: None"
-FragmentsClone.Size = UDim2.new(1, 0, 0, 28)
-FragmentsClone.TextXAlignment = Enum.TextXAlignment.Center
-FragmentsClone.TextStrokeTransparency = 1
-
-F_Text3.Position = UDim2.new(0.5, 0, 0.22, 0)
 
 		-- Item Sanguine Art
 		local F_Text5 = Instance.new("Frame")
