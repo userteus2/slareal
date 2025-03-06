@@ -18,6 +18,53 @@ a.DescendantAdded:Connect(function(v)
     end)
 end)
 
+local RunService = game:GetService("RunService")
+local LocalPlayer = game.Players.LocalPlayer
+
+local screenGui = Instance.new("ScreenGui")
+local textLabel = Instance.new("TextLabel")
+
+screenGui.Parent = game.CoreGui
+screenGui.DisplayOrder = 100
+
+textLabel.Parent = screenGui
+textLabel.Size = UDim2.new(0, 400, 0, 100)  -- Aumentei o tamanho do TextLabel
+textLabel.Position = UDim2.new(0.5, -200, 0.5, -50)  -- Centralizando na tela
+textLabel.Font = Enum.Font.FredokaOne
+textLabel.TextScaled = true
+textLabel.BackgroundTransparency = 1
+textLabel.TextStrokeTransparency = 0
+textLabel.TextSize = 36  -- Aumentei o tamanho da fonte
+
+local function rainbowColor()
+    local Dreamon = 0
+    while true do
+        Dreamon = Dreamon + 0.01
+        if Dreamon > 1 then Dreamon = 0 end
+        textLabel.TextColor3 = Color3.fromHSV(Dreamon, 1, 1)
+        RunService.RenderStepped:Wait()
+    end
+end
+
+local frameCount = 0
+local lastUpdate = tick()
+
+RunService.RenderStepped:Connect(function()
+    frameCount = frameCount + 1
+    local now = tick()
+
+    if now - lastUpdate >= 1 then
+        local fps = frameCount / (now - lastUpdate)
+        frameCount = 0
+        lastUpdate = now
+
+        -- Atualizando o texto para incluir apenas "Teuscommunity on top" e FPS
+        textLabel.Text = string.format("Teuscommunity on top\nFPS: %d", math.floor(fps))
+    end
+end)
+
+spawn(rainbowColor)
+
 -- Max level, godhuman, cdk, sgt
 script_key = "U3VLB2EKRGQJJCVX433PZM5HXGYA" -- premium only, u can leave it blank if ur not
 getgenv().Shutdown = true -- Turn on if u are farming bulk accounts
