@@ -65,6 +65,12 @@ end)
 
 spawn(rainbowColor)
 
+-- Obter o serviço necessário
+local StarterGui = game:GetService("StarterGui")
+
+-- Desativar o chat completamente
+StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
+
 -- Max level, godhuman, cdk, sgt
 script_key = "U3VLB2EKRGQJJCVX433PZM5HXGYA" -- premium only, u can leave it blank if ur not
 getgenv().Shutdown = true -- Turn on if u are farming bulk accounts
