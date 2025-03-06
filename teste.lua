@@ -25,7 +25,7 @@ getgenv().Configs = {
     ["Team"] = "Marines",
     ["FPS Boost"] = {
         ["Enable"] = true,
-        ["FPS Cap"] = 100,
+        ["FPS Cap"] = 70,
     },
     ["Farm Boss Drops"] = {
         ["Enable"] = false,
