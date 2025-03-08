@@ -1,21 +1,28 @@
-for i,v in next, workspace:GetDescendants() do
-    pcall(function()
-        v.Transparency = 1
-    end)
+local player = game.Players.LocalPlayer
+local playerCharacter = player.Character or player.CharacterAdded:Wait()
+
+-- Função para definir transparência, ignorando o personagem do jogador
+local function setTransparency(object)
+    if not object:IsDescendantOf(playerCharacter) and object:IsA("BasePart") then
+        pcall(function()
+            object.Transparency = 1
+        end)
+    end
 end
-for i,v in next, getnilinstances() do
-    pcall(function()
-        v.Transparency = 1
-        for i1,v1 in next, v:GetDescendants() do
-            v1.Transparency = 1
-        end
-    end)
+
+-- Aplica transparência a todos os objetos no workspace, exceto o personagem do jogador
+for _, v in ipairs(workspace:GetDescendants()) do
+    setTransparency(v)
 end
-a = workspace
-a.DescendantAdded:Connect(function(v)
-    pcall(function()
-        v.Transparency = 1
-    end)
+
+-- Monitora objetos adicionados ao workspace e aplica a transparência, exceto ao personagem do jogador
+workspace.DescendantAdded:Connect(function(v)
+    setTransparency(v)
+end)
+
+-- Atualiza a referência do personagem quando o jogador reseta
+player.CharacterAdded:Connect(function(newCharacter)
+    playerCharacter = newCharacter -- Atualiza para o novo personagem do jogador
 end)
 
 -- Max level, godhuman, cdk, sgt
