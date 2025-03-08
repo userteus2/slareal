@@ -1,23 +1,3 @@
-for i,v in next, workspace:GetDescendants() do
-    pcall(function()
-        v.Transparency = 1
-    end)
-end
-for i,v in next, getnilinstances() do
-    pcall(function()
-        v.Transparency = 1
-        for i1,v1 in next, v:GetDescendants() do
-            v1.Transparency = 1
-        end
-    end)
-end
-a = workspace
-a.DescendantAdded:Connect(function(v)
-    pcall(function()
-        v.Transparency = 1
-    end)
-end)
-
 -- Max level, godhuman, cdk, sgt
 script_key = "U3VLB2EKRGQJJCVX433PZM5HXGYA" -- premium only, u can leave it blank if ur not
 getgenv().Shutdown = true -- Turn on if u are farming bulk accounts
