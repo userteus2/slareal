@@ -18,6 +18,10 @@ a.DescendantAdded:Connect(function(v)
     end)
 end)
 
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
+
 -- Max level, godhuman, cdk, sgt
 script_key = "U3VLB2EKRGQJJCVX433PZM5HXGYA" -- premium only, u can leave it blank if ur not
 getgenv().Shutdown = true -- Turn on if u are farming bulk accounts
@@ -79,21 +83,3 @@ local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
 CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
 
-local mensagem = "Auto farm and free acc?
-Check this out: dc/YsR6ymwND4"
-local tempo = 100
-
-local function enviarMensagem()
-    local chatEvent = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
-    if chatEvent then
-        chatEvent:FireServer(mensagem, "All")
-        print("Mensagem enviada: " .. mensagem)
-    else
-        warn("Evento de chat não encontrado.")
-    end
-end
-
-while true do
-    enviarMensagem()
-    wait(tempo)
-end
