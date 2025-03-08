@@ -1,17 +1,4 @@
-local player = game.Players.LocalPlayer
-local playerCharacter = player.Character or player.CharacterAdded:Wait()
 
-local function setTransparency(object)
-    if not object:IsDescendantOf(playerCharacter) and object:IsA("BasePart") then
-        pcall(function() object.Transparency = 1 end)
-    end
-end
-
-for _, v in ipairs(workspace:GetDescendants()) do setTransparency(v) end
-
-workspace.DescendantAdded:Connect(setTransparency)
-
-player.CharacterAdded:Connect(function(newCharacter) playerCharacter = newCharacter end)
 
 -- Max level, godhuman, cdk, sgt
 script_key = "U3VLB2EKRGQJJCVX433PZM5HXGYA" -- premium only, u can leave it blank if ur not
