@@ -1,4 +1,3 @@
--- Delete map
 for i,v in next, workspace:GetDescendants() do
     pcall(function()
         v.Transparency = 1
@@ -18,10 +17,6 @@ a.DescendantAdded:Connect(function(v)
         v.Transparency = 1
     end)
 end)
-
-local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
-CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
 
 -- Max level, godhuman, cdk, sgt
 script_key = "U3VLB2EKRGQJJCVX433PZM5HXGYA" -- premium only, u can leave it blank if ur not
